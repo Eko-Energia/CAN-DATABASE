@@ -1,0 +1,137 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
+
+
+BO_ 1952 LightsRL_NODE: 8 LightsRL
+
+BO_ 1920 LightsRR_NODE: 8 LightsRR
+
+BO_ 1888 LightsFL_NODE: 8 LightsFL
+
+BO_ 1856 LightsFR_NODE: 8 LightsFR
+
+BO_ 1696 SensorRL_NODE: 8 SensorRL
+
+BO_ 1664 SensorRR_NODE: 8 SensorRR
+
+BO_ 1632 SensorFL_NODE: 8 SensorFL
+
+BO_ 1600 SensorFR_NODE: 8 SensorFR
+
+BO_ 1472 Converter_NODE: 8 Converter
+
+BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
+
+BO_ 1312 CoolingRight_NODE: 8 CoolingRight
+
+BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
+
+BO_ 1248 CoolingBack_NODE: 8 CoolingBack
+
+BO_ 1120 MPPT_NODE: 8 MPPT
+
+BO_ 992 Dashboard_NODE: 8 Dashboard
+
+BO_ 864 SmallBMS_NODE: 8 SmallBMS
+
+BO_ 192 RCD_RESERVED_NODE: 8 RCD
+
+BO_ 128 BigBMS_NODE: 8 BigBMS
+
+BO_ 64 Pedals_NODE: 8 Pedals
+
+BO_ 512 JETSON_RESERVED_NODE: 8 JETSON
+
+BO_ 0 SafeState_NODE: 8 SafeState
+
+BO_ 416 Engines1_RESERVED_NODE: 8 Engines
+
+BO_ 672 Engines2_RESERVED_NODE: 8 Engines
+
+BO_ 1824 Engines3_RESERVED_NODE: 8 Engines
+
+BO_ 1983 LightsRL_END: 8 LightsRL
+
+BO_ 1727 SensorRL_END: 8 SensorRL
+
+BO_ 1951 LightsRR_END: 8 LightsRR
+
+BO_ 31 SafeState_END: 8 SafeState
+
+BO_ 95 Pedals_END: 8 Pedals
+
+BO_ 159 BigBMS_END: 8 BigBMS
+
+BO_ 223 RCD_RESERVED_END: 8 RCD
+
+BO_ 447 Engines1_RESERVED_END: 8 Engines
+
+BO_ 703 Engines2_RESERVED_END: 8 Engines
+
+BO_ 1855 Engines3_RESERVED_END: 8 Engines
+
+BO_ 543 JETSON_RESERVED_END: 8 JETSON
+
+BO_ 895 SmallBMS_END: 8 SmallBMS
+
+BO_ 1503 Converter_END: 8 Converter
+
+BO_ 1279 CoolingBack_END: 8 CoolingBack
+
+BO_ 1311 CoolingLeft_END: 8 CoolingLeft
+
+BO_ 1375 CoolingMotor_END: 8 CoolingMotor
+
+BO_ 1343 CoolingRight_END: 8 CoolingRight
+
+BO_ 1023 Dashboard_END: 8 Dashboard
+
+BO_ 1151 MPPT_END: 8 MPPT
+
+BO_ 1653 SensorFL_END: 8 SensorFL
+
+BO_ 1631 SensorFR_END: 8 SensorFR
+
+BO_ 1695 SensorRR_END: 8 SensorRR
+
+BO_ 1919 LightsFL_END: 8 LightsFL
+
+BO_ 1887 LightsFR_END: 8 LightsFR
+
+
+
+
