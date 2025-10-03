@@ -11,4 +11,5 @@ To donwload .dbc file from this repo You should follow these steps:
         5. After these steps You should easily access
 
 !Warning!
+Edditing .dbc file is NOT PERMITTED until one of Coordinators authorization.
 Access for .dbc file is only for team members (Eko-energy members with access to team github).
