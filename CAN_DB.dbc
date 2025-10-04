@@ -52,7 +52,7 @@ BO_ 1632 SensorFL_NODE: 8 SensorFL
 
 BO_ 1600 SensorFR_NODE: 8 SensorFR
 
-BO_ 1472 Converter_NODE: 8 Converter
+BO_ 1472 LowVoltConverter_NODE: 8 Converter
 
 BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
 
@@ -68,21 +68,21 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
 
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
-BO_ 192 RCD_RESERVED_NODE: 8 RCD
+BO_ 192 RCD_STATIC_NODE: 8 RCD
 
 BO_ 128 BigBMS_NODE: 8 BigBMS
 
 BO_ 64 Pedals_NODE: 8 Pedals
 
-BO_ 512 JETSON_RESERVED_NODE: 8 JETSON
+BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
 BO_ 0 SafeState_NODE: 8 SafeState
 
-BO_ 416 Engines1_RESERVED_NODE: 8 Engines
+BO_ 416 Engines1_STATIC_NODE: 8 Engines
 
-BO_ 672 Engines2_RESERVED_NODE: 8 Engines
+BO_ 672 Engines2_STATIC_NODE: 8 Engines
 
-BO_ 1824 Engines3_RESERVED_NODE: 8 Engines
+BO_ 1824 Engines3_STATIC_NODE: 8 Engines
 
 BO_ 1983 LightsRL_END: 8 LightsRL
 
@@ -98,17 +98,11 @@ BO_ 159 BigBMS_END: 8 BigBMS
 
 BO_ 223 RCD_RESERVED_END: 8 RCD
 
-BO_ 447 Engines1_RESERVED_END: 8 Engines
-
-BO_ 703 Engines2_RESERVED_END: 8 Engines
-
-BO_ 1855 Engines3_RESERVED_END: 8 Engines
-
 BO_ 543 JETSON_RESERVED_END: 8 JETSON
 
 BO_ 895 SmallBMS_END: 8 SmallBMS
 
-BO_ 1503 Converter_END: 8 Converter
+BO_ 1503 LowVoltConverter_END: 8 Converter
 
 BO_ 1279 CoolingBack_END: 8 CoolingBack
 
@@ -132,6 +126,16 @@ BO_ 1919 LightsFL_END: 8 LightsFL
 
 BO_ 1887 LightsFR_END: 8 LightsFR
 
+BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
+ SG_ MaxChargVoltHighB : 0|8@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargVoltLowB : 8|8@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurrHighB : 16|8@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
+
+CM_ BO_ 0 "
+";
+VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
 
