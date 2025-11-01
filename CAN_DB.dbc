@@ -38,6 +38,7 @@ BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboar
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0057 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BigBMS_SafeState : 7|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -73,7 +74,9 @@ BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
 
-BO_ 128 BigBMS_NODE: 8 BigBMS
+BO_ 128 BigBMS_NODE: 2 BigBMS
+ SG_ BigBMS_ErrorCodeBH : 7|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BigBMS_ErrorCodeBL : 15|8@0+ (1,0) [256|65535] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
 
@@ -135,9 +138,6 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ MaxChargCurrHighB : 16|8@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
-
-BO_ 129 BigBMS_SafeState: 0 BigBMS
- SG_ BigBMS_SafeState : 15|0@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BigBMS_MasterVoltCurrTemp: 6 BigBMS
  SG_ BigBMS_MasterBatteryVoltageBH : 7|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
