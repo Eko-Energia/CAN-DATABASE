@@ -36,6 +36,9 @@ BS_:
 BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0057 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
 BO_ 1920 LightsRR_NODE: 8 LightsRR
@@ -133,9 +136,170 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 129 BigBMS_SafeState: 0 BigBMS
+ SG_ BigBMS_SafeState : 15|0@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 130 BigBMS_MasterVoltCurrTemp: 6 BigBMS
+ SG_ BigBMS_MasterBatteryVoltageBH : 7|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BigBMS_MasterBatteryVoltageBL : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BigBMS_MasterBatteryCurrentBH : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BigBMS_MasterBatteryCurrentBL : 31|8@0+ (10.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BigBMS_MasterBatteryTemperaturBH : 39|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
+ SG_ BigBMS_MasterBatteryTemperaturBL : 47|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
+
+BO_ 131 BigBMS_PCBsTherm1Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm1Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm1Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm1Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm1Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm1Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm1Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm1Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 132 BigBMS_PCBsTherm2Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm2Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm2Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm2Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm2Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm2Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm2Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm2Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 133 BigBMS_PCBsTherm3Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm3Temp : 7|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm3Temp : 15|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm3Temp : 23|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm3Temp : 31|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm3Temp : 39|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm3Temp : 47|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm3Temp : 55|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+
+BO_ 134 BigBMS_PCBsTherm4Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm4Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm4Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm4Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm4Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm4Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm4Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm4Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 135 BigBMS_PCBsTherm5Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm5Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm5Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm5Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm5Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm5Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm5Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm5Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 136 BigBMS_PCBsTherm6Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm6Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm6Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm6Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm6Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm6Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm6Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm6Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 137 BigBMS_PCBsTherm7Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm7Temp : 7|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm7Temp : 15|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm7Temp : 23|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm7Temp : 31|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm7Temp : 39|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm7Temp : 47|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm7Temp : 55|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
+
+BO_ 138 BigBMS_PCBsTherm8Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm8Temp : 7|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm8Temp : 15|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB3Therm8Temp : 23|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm8Temp : 31|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm8Temp : 39|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm8Temp : 47|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm8Temp : 55|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+
+BO_ 139 BigBMS_PCBsTherm9Temp: 7 BigBMS
+ SG_ BigBMS_PCB1Therm9Temp : 7|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB2Therm9Temp : 15|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB13herm9Temp : 23|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB4Therm9Temp : 31|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB5Therm9Temp : 39|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB6Therm9Temp : 47|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+ SG_ BigBMS_PCB7Therm9Temp : 55|8@0+ (0.39216,49) [0|100] "°C" Vector__XXX
+
 
 
 CM_ BO_ 0 "
 ";
+CM_ SG_ 130 BigBMS_MasterBatteryVoltageBH "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryVoltageBL "Master battery Voltage LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryCurrentBH "Master battery Current MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryCurrentBL "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryTemperaturBH "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryTemperaturBL "Master battery Temperature LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 131 BigBMS_PCB1Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 1";
+CM_ SG_ 131 BigBMS_PCB2Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 2";
+CM_ SG_ 131 BigBMS_PCB3Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 3";
+CM_ SG_ 131 BigBMS_PCB4Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 4";
+CM_ SG_ 131 BigBMS_PCB5Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 5";
+CM_ SG_ 131 BigBMS_PCB6Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 6";
+CM_ SG_ 131 BigBMS_PCB7Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 7";
+CM_ SG_ 132 BigBMS_PCB1Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 1";
+CM_ SG_ 132 BigBMS_PCB2Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 2";
+CM_ SG_ 132 BigBMS_PCB3Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 3";
+CM_ SG_ 132 BigBMS_PCB4Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 4";
+CM_ SG_ 132 BigBMS_PCB5Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 5";
+CM_ SG_ 132 BigBMS_PCB6Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 6";
+CM_ SG_ 132 BigBMS_PCB7Therm2Temp "Byte represents temperature measured by thermistor 2, located on Cells' PCB No. 7";
+CM_ SG_ 133 BigBMS_PCB1Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 1";
+CM_ SG_ 133 BigBMS_PCB2Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 2";
+CM_ SG_ 133 BigBMS_PCB3Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 3";
+CM_ SG_ 133 BigBMS_PCB4Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 4";
+CM_ SG_ 133 BigBMS_PCB5Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 5";
+CM_ SG_ 133 BigBMS_PCB6Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 6";
+CM_ SG_ 133 BigBMS_PCB7Therm3Temp "Byte represents temperature measured by thermistor 3, located on Cells' PCB No. 7";
+CM_ SG_ 134 BigBMS_PCB1Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 1";
+CM_ SG_ 134 BigBMS_PCB2Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 2";
+CM_ SG_ 134 BigBMS_PCB3Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 3";
+CM_ SG_ 134 BigBMS_PCB4Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 4";
+CM_ SG_ 134 BigBMS_PCB5Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 5";
+CM_ SG_ 134 BigBMS_PCB6Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 6";
+CM_ SG_ 134 BigBMS_PCB7Therm4Temp "Byte represents temperature measured by thermistor 4, located on Cells' PCB No. 7";
+CM_ SG_ 135 BigBMS_PCB1Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 1";
+CM_ SG_ 135 BigBMS_PCB2Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 2";
+CM_ SG_ 135 BigBMS_PCB3Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 3";
+CM_ SG_ 135 BigBMS_PCB4Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 4";
+CM_ SG_ 135 BigBMS_PCB5Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 5";
+CM_ SG_ 135 BigBMS_PCB6Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 6";
+CM_ SG_ 135 BigBMS_PCB7Therm5Temp "Byte represents temperature measured by thermistor 5, located on Cells' PCB No. 7";
+CM_ SG_ 136 BigBMS_PCB1Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 1";
+CM_ SG_ 136 BigBMS_PCB2Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 2";
+CM_ SG_ 136 BigBMS_PCB3Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 3";
+CM_ SG_ 136 BigBMS_PCB4Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 4";
+CM_ SG_ 136 BigBMS_PCB5Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 5";
+CM_ SG_ 136 BigBMS_PCB6Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 6";
+CM_ SG_ 136 BigBMS_PCB7Therm6Temp "Byte represents temperature measured by thermistor 6, located on Cells' PCB No. 7";
+CM_ SG_ 137 BigBMS_PCB1Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 1";
+CM_ SG_ 137 BigBMS_PCB2Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 2";
+CM_ SG_ 137 BigBMS_PCB3Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 3";
+CM_ SG_ 137 BigBMS_PCB4Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 4";
+CM_ SG_ 137 BigBMS_PCB5Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 5";
+CM_ SG_ 137 BigBMS_PCB6Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 6";
+CM_ SG_ 137 BigBMS_PCB7Therm7Temp "Byte represents temperature measured by thermistor 7, located on Cells' PCB No. 7";
+CM_ SG_ 138 BigBMS_PCB1Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 1";
+CM_ SG_ 138 BigBMS_PCB2Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 2";
+CM_ SG_ 138 BigBMS_PCB3Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 3";
+CM_ SG_ 138 BigBMS_PCB4Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 4";
+CM_ SG_ 138 BigBMS_PCB5Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 5";
+CM_ SG_ 138 BigBMS_PCB6Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 6";
+CM_ SG_ 138 BigBMS_PCB7Therm8Temp "Byte represents temperature measured by thermistor 8, located on Cells' PCB No. 7";
+CM_ SG_ 139 BigBMS_PCB1Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 1";
+CM_ SG_ 139 BigBMS_PCB2Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 2";
+CM_ SG_ 139 BigBMS_PCB13herm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 3";
+CM_ SG_ 139 BigBMS_PCB4Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 4";
+CM_ SG_ 139 BigBMS_PCB5Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 5";
+CM_ SG_ 139 BigBMS_PCB6Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 6";
+CM_ SG_ 139 BigBMS_PCB7Therm9Temp "Byte represents temperature measured by thermistor 9, located on Cells' PCB No. 7";
 VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
 
