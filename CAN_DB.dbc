@@ -39,6 +39,9 @@ BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboar
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0057 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
  SG_ BigBMS_SafeState : 7|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ BigBMS_MasterBatteryCurrentB : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BigBMS_MasterBatteryVoltageBL : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BigBMS_MasterBatteryTemperaturBL : 47|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -140,12 +143,9 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BigBMS_MasterVoltCurrTemp: 6 BigBMS
- SG_ BigBMS_MasterBatteryVoltageBH : 7|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BigBMS_MasterBatteryVoltageBL : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BigBMS_MasterBatteryCurrentBH : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
- SG_ BigBMS_MasterBatteryCurrentBL : 31|8@0+ (10.1465,300) [-300|300] "A" Vector__XXX
- SG_ BigBMS_MasterBatteryTemperaturBH : 39|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
- SG_ BigBMS_MasterBatteryTemperaturBL : 47|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
+ SG_ BigBMS_MasterBatteryVoltage : 7|16@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BigBMS_MasterBatteryCurrent : 23|16@0+ (10.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BigBMS_MasterBatteryTemperatur : 39|16@0+ (0.024,50) [0|100] "?C" Vector__XXX
 
 BO_ 131 BigBMS_PCBsTherm1Temp: 7 BigBMS
  SG_ BigBMS_PCB1Therm1Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
@@ -230,14 +230,14 @@ BO_ 139 BigBMS_PCBsTherm9Temp: 7 BigBMS
 
 
 
+CM_ SG_ 3221225472 BigBMS_MasterBatteryCurrentB "Master battery Current MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 3221225472 BigBMS_MasterBatteryVoltageBL "Master battery Voltage LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 3221225472 BigBMS_MasterBatteryTemperaturBL "Master battery Temperature LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ BO_ 0 "
 ";
-CM_ SG_ 130 BigBMS_MasterBatteryVoltageBH "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BigBMS_MasterBatteryVoltageBL "Master battery Voltage LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BigBMS_MasterBatteryCurrentBH "Master battery Current MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BigBMS_MasterBatteryCurrentBL "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BigBMS_MasterBatteryTemperaturBH "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BigBMS_MasterBatteryTemperaturBL "Master battery Temperature LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BigBMS_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 131 BigBMS_PCB1Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 1";
 CM_ SG_ 131 BigBMS_PCB2Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 2";
 CM_ SG_ 131 BigBMS_PCB3Therm1Temp "Byte represents temperature measured by thermistor 1, located on Cells' PCB No. 3";
