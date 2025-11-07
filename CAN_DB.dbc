@@ -42,6 +42,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ BigBMS_MasterBatteryCurrentB : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
  SG_ BigBMS_MasterBatteryVoltageBL : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
  SG_ BigBMS_MasterBatteryTemperaturBL : 47|8@0+ (0.024,50) [0|100] "?C" Vector__XXX
+ SG_ NewSignal_0001 : 7|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -77,9 +78,10 @@ BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
 
-BO_ 128 BigBMS_NODE: 2 BigBMS
- SG_ BigBMS_ErrorCodeBH : 7|8@0+ (1,0) [0|255] "" Vector__XXX
- SG_ BigBMS_ErrorCodeBL : 15|8@0+ (1,0) [256|65535] "" Vector__XXX
+BO_ 128 BigBMS_NODE: 3 BigBMS
+ SG_ BigBMS_ErrorCodeBH : 15|8@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BigBMS_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
+ SG_ BigBMS_SafeState : 0|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
 
