@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
+BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3
 
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
@@ -127,15 +127,27 @@ BO_ 1919 LightsFL_END: 8 LightsFL
 BO_ 1887 LightsFR_END: 8 LightsFR
 
 BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
- SG_ MaxChargVoltHighB : 0|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargVoltLowB : 8|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurrHighB : 16|8@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1_MaxChargVoltage : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ Charger1_MaxChargCurrent : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Charger1_Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869221 Charger1_OUT: 8 Charger1
+ SG_ Charger1_OutputVoltage : 0|16@1+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ Chargerr1_OutputCurrent : 16|16@1+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Charger1_HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1_Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1_InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1_StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1_CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
 CM_ BO_ 0 "
 ";
-VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
+VAL_ 2550588916 Charger1_Control 1 "Start charging" 0 "Stop charging" ;
+VAL_ 2566869221 Charger1_HardwareFailure 0 "Normal" 1 "Hardware Failure" ;
+VAL_ 2566869221 Charger1_Temperature 0 "Normal" 1 "OverTempProtection" ;
+VAL_ 2566869221 Charger1_InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869221 Charger1_StaringState 0 "Charging" 1 "TurnOff" ;
+VAL_ 2566869221 Charger1_CommunicationState 0 "Normal" 1 "Time-out" ;
 
