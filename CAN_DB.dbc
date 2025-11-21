@@ -146,8 +146,8 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
 
 BO_ 130 BigBMS_MasterVoltCurrTemp: 6 BigBMS
  SG_ BigBMS_MasterBatteryVoltage : 7|16@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BigBMS_MasterBatteryCurrent : 23|16@0+ (10.1465,300) [-300|300] "A" Vector__XXX
- SG_ BigBMS_MasterBatteryTemperatur : 39|16@0+ (0.024,50) [0|100] "?C" Vector__XXX
+ SG_ BigBMS_MasterBatteryCurrent : 23|16@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BigBMS_MasterBatteryTemperatur : 39|16@0+ (0.024,50) [0|100] "C" Vector__XXX
 
 BO_ 131 BigBMS_PCBsTherm1Temp: 7 BigBMS
  SG_ BigBMS_PCB1Therm1Temp : 7|8@0+ (0.39216,49.8039) [0|100] "°C" Vector__XXX
