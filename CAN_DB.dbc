@@ -33,8 +33,14 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
 
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BMSMaster_MasterBatteryTemperatur : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -70,7 +76,9 @@ BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
 
-BO_ 128 BigBMS_NODE: 8 BigBMS
+BO_ 128 BMSMaster_NODE: 3 BMSMaster
+ SG_ BMSMaster_ErrorCode : 15|16@0+ (1,0) [0|255] "" Vector__XXX
+ SG_ BMSMaster_SafeState : 0|1@0+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
 
@@ -88,7 +96,7 @@ BO_ 31 SafeState_END: 8 SafeState
 
 BO_ 95 Pedals_END: 8 Pedals
 
-BO_ 159 BigBMS_END: 8 BigBMS
+BO_ 159 BMSMaster_END: 8 BMSMaster
 
 BO_ 223 RCD_STATIC_END: 8 RCD
 
@@ -135,6 +143,92 @@ BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
  SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
+ SG_ BMSMaster_MasterBatteryVoltage : 7|16@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BMSMaster_MasterBatteryCurrent : 23|16@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BMSMaste_MasterBatteryTemperatur : 39|16@0+ (0.024,50) [0|100] "C" Vector__XXX
+
+BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm1Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm1Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm1Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm1Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm1Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm1Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm1Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 132 BMSMaster_PCBsTherm2Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm2Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm2Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm2Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm2Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm2Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm2Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm2Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 133 BMSMaster_PCBsTherm3Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm3Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm3Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm3Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm3Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm3Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm3Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm3Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+
+BO_ 134 BMSMaster_PCBsTherm4Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm4Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm4Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm4Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm4Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm4Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm4Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm4Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 135 BMSMaster_PCBsTherm5Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm5Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm5Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm5Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm5Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm5Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm5Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm5Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 136 BMSMaster_PCBsTherm6Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm6Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm6Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm6Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm6Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm6Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm6Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm6Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 137 BMSMaster_PCBsTherm7Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm7Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm7Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm7Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm7Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm7Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm7Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm7Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 138 BMSMaster_PCBsTherm8Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm8Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm8Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm8Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm8Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm8Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm8Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm8Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+
+BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm9Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm9Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB13herm9Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm9Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm9Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm9Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm9Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+
 
 
 CM_ BO_ 0 "
@@ -148,4 +242,7 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 
