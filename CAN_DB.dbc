@@ -78,12 +78,6 @@ BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
 BO_ 0 SafeState_NODE: 8 SafeState
 
-BO_ 416 Engines1_STATIC_NODE: 8 Engines
-
-BO_ 672 Engines2_STATIC_NODE: 8 Engines
-
-BO_ 1824 Engines3_STATIC_NODE: 8 Engines
-
 BO_ 1983 LightsRL_END: 8 LightsRL
 
 BO_ 1727 SensorRL_END: 8 SensorRL
@@ -126,16 +120,32 @@ BO_ 1919 LightsFL_END: 8 LightsFL
 
 BO_ 1887 LightsFR_END: 8 LightsFR
 
-BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
- SG_ MaxChargVoltHighB : 0|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargVoltLowB : 8|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurrHighB : 16|8@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
+BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
+ SG_ MaxChargVolt : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
 CM_ BO_ 0 "
 ";
-VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
+CM_ SG_ 2550588916 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550588916 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589428 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
+VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 
