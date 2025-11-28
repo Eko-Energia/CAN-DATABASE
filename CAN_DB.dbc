@@ -102,7 +102,7 @@ BO_ 31 SafeState_END: 8 SafeState
 
 BO_ 95 Pedals_END: 8 Pedals
 
-BO_ 159 BigBMS_END: 8 BMSMaster
+BO_ 159 BMSMaster_END: 8 BMSMaster
 
 BO_ 223 RCD_STATIC_END: 8 RCD
 
