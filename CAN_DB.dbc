@@ -125,7 +125,7 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ Charger1_MaxChargCurrent : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ Charger1_Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2566869221 Charger1_OUT: 8 Charger1
+BO_ 2566869221 Charger1_STATIC_OUT: 8 Charger1
  SG_ Charger1OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
  SG_ Chargerr1OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
  SG_ Charger1HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -174,7 +174,7 @@ BO_ 679 EngineRight_STATIC_TPDO2: 8 EngineRight
 BO_ 551 JETSON_STATIC_EngineRight_RPDO1: 8 JETSON
  SG_ RightMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
 
-BO_ 2566869223 Charger2_OUT: 8 Charger2
+BO_ 2566869223 Charger2_STATIC_OUT: 8 Charger2
  SG_ Charger2OutputVoltage : 0|16@1+ (0.1,0) [440|900] "V" Vector__XXX
  SG_ Charger2OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
  SG_ Charger2HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -183,7 +183,7 @@ BO_ 2566869223 Charger2_OUT: 8 Charger2
  SG_ Charger2StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Charger2CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 2566869224 Charger3_OUT: 8 Charger3
+BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
  SG_ Charger3OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
  SG_ Charger3HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
