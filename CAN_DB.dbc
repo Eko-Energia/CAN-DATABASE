@@ -231,8 +231,8 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
 
 CM_ BO_ 0 "
 ";
-CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature value which is read by ADC embedded in stm32 core on BMS Masster board";
 VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
 
