@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3
+BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
 
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
@@ -77,12 +77,6 @@ BO_ 64 Pedals_NODE: 8 Pedals
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
 BO_ 0 SafeState_NODE: 8 SafeState
-
-BO_ 416 Engines1_STATIC_NODE: 8 Engines
-
-BO_ 672 Engines2_STATIC_NODE: 8 Engines
-
-BO_ 1824 Engines3_STATIC_NODE: 8 Engines
 
 BO_ 1983 LightsRL_END: 8 LightsRL
 
@@ -132,22 +126,95 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ Charger1_Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2566869221 Charger1_OUT: 8 Charger1
- SG_ Charger1_OutputVoltage : 0|16@1+ (0.1,0) [0|0] "V" Vector__XXX
- SG_ Chargerr1_OutputCurrent : 16|16@1+ (0.1,0) [0|0] "A" Vector__XXX
- SG_ Charger1_HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Charger1_Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Charger1_InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Charger1_StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Charger1_CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
+ SG_ Chargerr1OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger1HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 422 EngineLeft_STATIC_TPDO1: 8 EngineLeft
+ SG_ LeftMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
+ SG_ LeftMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
+ SG_ LeftMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
+ SG_ LeftMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+
+BO_ 678 EngineLeft_STATIC_TPDO2: 8 EngineLeft
+ SG_ LeftMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
+ SG_ LeftMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ LeftMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 1830 EngineLeft_STATIC_NMT: 1 EngineLeft
+ SG_ LeftMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 166 EngineLeft_STATIC_EMCY: 8 EngineLeft
+ SG_ LeftMotorErrorMsg : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 550 JETSON_STATIC_EngineLeft_RPDO1: 8 JETSON
+ SG_ LeftMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 167 EngineRight_STATIC_EMCY: 8 EngineRight
+ SG_ RightMotorErrorMsg : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1831 EngineRight_STATIC_NMT: 1 EngineRight
+ SG_ RightMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 423 EngineRight_STATIC_TPDO1: 8 EngineRight
+ SG_ RightMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
+ SG_ RightMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
+ SG_ RightMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
+ SG_ RightMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+
+BO_ 679 EngineRight_STATIC_TPDO2: 8 EngineRight
+ SG_ RightMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
+ SG_ RightMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ RightMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 551 JETSON_STATIC_EngineRight_RPDO1: 8 JETSON
+ SG_ RightMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 2566869223 Charger2_OUT: 8 Charger2
+ SG_ Charger2OutputVoltage : 0|16@1+ (0.1,0) [440|900] "V" Vector__XXX
+ SG_ Charger2OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger2HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869224 Charger3_OUT: 8 Charger3
+ SG_ Charger3OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
+ SG_ Charger3OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger3HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
 
 
 CM_ BO_ 0 "
 ";
+CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
+";
+CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
 VAL_ 2550588916 Charger1_Control 1 "Start charging" 0 "Stop charging" ;
-VAL_ 2566869221 Charger1_HardwareFailure 0 "Normal" 1 "Hardware Failure" ;
-VAL_ 2566869221 Charger1_Temperature 0 "Normal" 1 "OverTempProtection" ;
-VAL_ 2566869221 Charger1_InputVoltage 0 "Normal" 1 "Wrong" ;
-VAL_ 2566869221 Charger1_StaringState 0 "Charging" 1 "TurnOff" ;
-VAL_ 2566869221 Charger1_CommunicationState 0 "Normal" 1 "Time-out" ;
+VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869221 Charger1StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869221 Charger1CommunicationState 0 "Normal" 1 "Time-out" ;
+VAL_ 1830 LeftMotorNMTState 0 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 1831 RightMotorNMTState 9 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 2566869223 Charger2HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869223 Charger2Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869223 Charger2InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869223 Charger2StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869223 Charger2CommunicationState 0 "Normal" 1 "Time-out" ;
+VAL_ 2566869224 Charger3HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869224 Charger3Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869224 Charger3InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869224 Charger3StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
 
