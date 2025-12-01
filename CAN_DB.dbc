@@ -133,7 +133,7 @@ BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
  SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 129 BigBMS_ERROR: 8 BigBMS
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
@@ -144,11 +144,11 @@ BO_ 129 BigBMS_ERROR: 8 BigBMS
 
 CM_ BO_ 0 "
 ";
-CM_ SG_ 129 Error_Code "Error code from csv errors file
+CM_ SG_ 3221225472 Error_Code "Error code from csv errors file
 ";
-CM_ SG_ 129 Reserved "Reserved for future use";
-CM_ SG_ 129 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 3221225472 Reserved "Reserved for future use";
+CM_ SG_ 3221225472 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
-VAL_ 129 Node_Execution_Halted 0 "Running" 1 "Halted" ;
-VAL_ 129 Severity 1 "Error" 2 "Warning" 3 "Info" ;
+VAL_ 3221225472 Node_Execution_Halted 0 "Running" 1 "Halted" ;
+VAL_ 3221225472 Severity 1 "Error" 2 "Warning" 3 "Info" ;
 
