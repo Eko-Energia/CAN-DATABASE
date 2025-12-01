@@ -33,8 +33,14 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard Engines JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS
+BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
 
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BMSMaster_MasterBatteryTemperatur : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -83,12 +89,6 @@ BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
 BO_ 0 SafeState_NODE: 8 SafeState
 
-BO_ 416 Engines1_STATIC_NODE: 8 Engines
-
-BO_ 672 Engines2_STATIC_NODE: 8 Engines
-
-BO_ 1824 Engines3_STATIC_NODE: 8 Engines
-
 BO_ 1983 LightsRL_END: 8 LightsRL
 
 BO_ 1727 SensorRL_END: 8 SensorRL
@@ -99,7 +99,7 @@ BO_ 31 SafeState_END: 8 SafeState
 
 BO_ 95 Pedals_END: 8 Pedals
 
-BO_ 159 BigBMS_END: 8 BigBMS
+BO_ 159 BMSMaster_END: 8 BMSMaster
 
 BO_ 223 RCD_STATIC_END: 8 RCD
 
@@ -131,12 +131,172 @@ BO_ 1919 LightsFL_END: 8 LightsFL
 
 BO_ 1887 LightsFR_END: 8 LightsFR
 
-BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
- SG_ MaxChargVoltHighB : 0|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargVoltLowB : 8|8@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurrHighB : 16|8@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ MaxChargCurrLowB : 24|8@1+ (1,0) [0|0] "A" Vector__XXX
+BO_ 2566869221 Charger1_STATIC_OUT: 8 Charger1
+ SG_ Charger1OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
+ SG_ Chargerr1OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger1HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger1CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 422 EngineLeft_STATIC_TPDO1: 8 EngineLeft
+ SG_ LeftMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
+ SG_ LeftMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
+ SG_ LeftMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
+ SG_ LeftMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+
+BO_ 678 EngineLeft_STATIC_TPDO2: 8 EngineLeft
+ SG_ LeftMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
+ SG_ LeftMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ LeftMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 1830 EngineLeft_STATIC_NMT: 1 EngineLeft
+ SG_ LeftMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 166 EngineLeft_STATIC_EMCY: 8 EngineLeft
+ SG_ LeftMotorErrorMsg : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 550 JETSON_STATIC_EngineLeft_RPDO1: 8 JETSON
+ SG_ LeftMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 167 EngineRight_STATIC_EMCY: 8 EngineRight
+ SG_ RightMotorErrorMsg : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1831 EngineRight_STATIC_NMT: 1 EngineRight
+ SG_ RightMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 423 EngineRight_STATIC_TPDO1: 8 EngineRight
+ SG_ RightMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
+ SG_ RightMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
+ SG_ RightMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
+ SG_ RightMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+
+BO_ 679 EngineRight_STATIC_TPDO2: 8 EngineRight
+ SG_ RightMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
+ SG_ RightMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
+ SG_ RightMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 551 JETSON_STATIC_EngineRight_RPDO1: 8 JETSON
+ SG_ RightMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
+
+BO_ 2566869223 Charger2_STATIC_OUT: 8 Charger2
+ SG_ Charger2OutputVoltage : 0|16@1+ (0.1,0) [440|900] "V" Vector__XXX
+ SG_ Charger2OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger2HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger2CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
+ SG_ Charger3OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
+ SG_ Charger3OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
+ SG_ Charger3HardwareFailure : 32|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3Temperature : 33|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
  SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
+ SG_ MaxChargVolt : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
+ SG_ BMSMaster_MasterBatteryVoltage : 7|16@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BMSMaster_MasterBatteryCurrent : 23|16@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BMSMaste_MasterBatteryTemperatur : 39|16@0+ (0.024,50) [0|100] "C" Vector__XXX
+
+BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm1Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm1Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm1Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm1Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm1Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm1Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm1Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 132 BMSMaster_PCBsTherm2Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm2Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm2Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm2Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm2Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm2Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm2Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm2Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 133 BMSMaster_PCBsTherm3Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm3Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm3Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm3Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm3Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm3Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm3Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm3Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+
+BO_ 134 BMSMaster_PCBsTherm4Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm4Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm4Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm4Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm4Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm4Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm4Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm4Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 135 BMSMaster_PCBsTherm5Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm5Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm5Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm5Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm5Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm5Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm5Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm5Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 136 BMSMaster_PCBsTherm6Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm6Temp : 7|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm6Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm6Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm6Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm6Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm6Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm6Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 137 BMSMaster_PCBsTherm7Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm7Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm7Temp : 15|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm7Temp : 23|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm7Temp : 31|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm7Temp : 39|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm7Temp : 47|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm7Temp : 55|8@0+ (0.39216,49.8039) [0|100] "�C" Vector__XXX
+
+BO_ 138 BMSMaster_PCBsTherm8Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm8Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm8Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB3Therm8Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm8Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm8Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm8Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm8Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+
+BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
+ SG_ BMSMaster_PCB1Therm9Temp : 7|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB2Therm9Temp : 15|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB13herm9Temp : 23|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB4Therm9Temp : 31|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB5Therm9Temp : 39|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB6Therm9Temp : 47|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
+ SG_ BMSMaster_PCB7Therm9Temp : 55|8@0+ (0.39216,49) [0|100] "�C" Vector__XXX
 
 
 
@@ -146,7 +306,37 @@ CM_ SG_ 128 Reserved "Reserved for future use";
 CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 CM_ BO_ 0 "
 ";
-VAL_ 128 Node_Execution_Halted 0 "Running" 1 "Halted" ;
-VAL_ 128 Severity 1 "Error" 2 "Warning" 3 "Info" 0 "Safe_State" ;
-VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
+CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
+";
+CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
+VAL_ 2550588916 Charger1Control 1 "Start charging" 0 "Stop charging" ;
+VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869221 Charger1StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869221 Charger1CommunicationState 0 "Normal" 1 "Time-out" ;
+VAL_ 1830 LeftMotorNMTState 0 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 1831 RightMotorNMTState 9 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
+VAL_ 2566869223 Charger2HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869223 Charger2Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869223 Charger2InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869223 Charger2StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869223 Charger2CommunicationState 0 "Normal" 1 "Time-out" ;
+VAL_ 2566869224 Charger3HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+VAL_ 2566869224 Charger3Temperature 0 "Normal" 1 "Over temp protection" ;
+VAL_ 2566869224 Charger3InputVoltage 0 "Normal" 1 "Wrong" ;
+VAL_ 2566869224 Charger3StaringState 0 "Charging" 1 "Turn off" ;
+VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
+CM_ SG_ 2550588916 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550588916 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589428 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
+VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 
