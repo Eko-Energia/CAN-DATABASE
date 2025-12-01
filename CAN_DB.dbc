@@ -128,11 +128,6 @@ BO_ 1919 LightsFL_END: 8 LightsFL
 
 BO_ 1887 LightsFR_END: 8 LightsFR
 
-BO_ 2550588916 RCD_STATIC_ConverterComm: 8 RCD
- SG_ Charger1_MaxChargVoltage : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ Charger1_MaxChargCurrent : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ Charger1_Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 2566869221 Charger1_STATIC_OUT: 8 Charger1
  SG_ Charger1OutputVoltage : 0|16@1+ (0.1,0) [440|990] "V" Vector__XXX
  SG_ Chargerr1OutputCurrent : 16|16@1+ (0.1,0) [0|400] "A" Vector__XXX
@@ -199,6 +194,20 @@ BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3InputVoltage : 34|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Charger3StaringState : 35|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
+BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
+ SG_ MaxChargVolt : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
+ SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 7|16@0+ (0.0059,12) [63|87] "V" Vector__XXX
@@ -293,7 +302,7 @@ CM_ BO_ 0 "
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
 ";
 CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
-VAL_ 2550588916 Charger1_Control 1 "Start charging" 0 "Stop charging" ;
+VAL_ 2550588916 Charger1Control 1 "Start charging" 0 "Stop charging" ;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
@@ -311,8 +320,16 @@ VAL_ 2566869224 Charger3Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869224 Charger3InputVoltage 0 "Normal" 1 "Wrong" ;
 VAL_ 2566869224 Charger3StaringState 0 "Charging" 1 "Turn off" ;
 VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
+CM_ SG_ 2550588916 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550588916 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589428 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
+CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
+VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-VAL_ 2550588916 Control 1 "Start charging" 0 "Stop charging" ;
 
