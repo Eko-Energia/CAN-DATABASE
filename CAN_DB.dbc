@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -76,9 +76,12 @@ BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
 
-BO_ 128 BMSMaster_NODE: 3 BMSMaster
- SG_ BMSMaster_ErrorCode : 15|16@0+ (1,0) [0|255] "" Vector__XXX
- SG_ BMSMaster_SafeState : 0|1@0+ (1,0) [0|1] "" Vector__XXX
+BO_ 128 BMSMaster_NODE: 8 BMSMaster
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
 
@@ -297,6 +300,10 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
 
 
 
+CM_ SG_ 128 Error_Code "Error code from csv errors file
+";
+CM_ SG_ 128 Reserved "Reserved for future use";
+CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 CM_ BO_ 0 "
 ";
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
