@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BigBMS Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -76,7 +76,7 @@ BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
 
-BO_ 128 BigBMS_NODE: 8 BigBMS
+BO_ 128 BMSMaster_NODE: 8 BMSMaster
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
