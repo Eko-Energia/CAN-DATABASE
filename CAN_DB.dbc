@@ -210,7 +210,7 @@ BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
 
 BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
  SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
  SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
