@@ -191,19 +191,19 @@ BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
- SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
- SG_ MaxChargVolt : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ MaxChargCurr : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Control : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
- SG_ MaxChargVolt : 0|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ MaxChargCurr : 16|16@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Control : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0059,12) [63|87] "V" Vector__XXX
@@ -220,7 +220,7 @@ BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
  SG_ BMSMaster_PCB7Therm1Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
 BO_ 132 BMSMaster_PCBsTherm2Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm2Temp : 0|8@1+ (0.39216,49.8039) [0|100] "1" Vector__XXX
+ SG_ BMSMaster_PCB1Therm2Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB2Therm2Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB3Therm2Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB4Therm2Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
