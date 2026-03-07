@@ -36,6 +36,9 @@ BS_:
 BU_: PCBCells1 PCBCells2 PCBCells3 PCBCells4 PCBCells5 PCBCells6 PCBCells7
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ NewSignal_0051 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 210 PCBCells1_NODE: 8 PCBCells1
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -89,6 +92,7 @@ BO_ 211 PCBCells1_Therm1: 1 PCBCells1
  SG_ PCBCells1_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
 
 BO_ 212 PCBCells1_Therm2: 1 PCBCells1
+ SG_ PCBCells1_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
 
 BO_ 213 PCBCells1_Therm3: 1 PCBCells1
  SG_ PCBCells1_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
@@ -109,7 +113,34 @@ BO_ 218 PCBCells1_Therm8: 1 PCBCells1
  SG_ PCBCells1_Therm8 : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
 
 BO_ 219 PCBCells1_Therm9: 1 PCBCells1
- SG_ PCBCells1_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 221 PCBCells2_Therm9: 1 PCBCells2
+ SG_ PCBCells2_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 222 PCBCells2_Therm8: 1 PCBCells2
+ SG_ PCBCells2_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 223 PCBCells2_Therm7: 1 PCBCells2
+ SG_ PCBCells2_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 224 PCBCells2_Therm6: 1 PCBCells2
+ SG_ PCBCells2_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 225 PCBCells2_Therm5: 1 PCBCells2
+ SG_ PCBCells2_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 226 PCBCells2_Therm4: 1 PCBCells2
+ SG_ PCBCells2_Therm4_temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 227 PCBCells2_Therm3: 1 PCBCells2
+ SG_ PCBCells2_Therm3_temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 228 PCBCells2_Therm2: 1 PCBCells2
+ SG_ PCBCells2_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 229 PCBCells2_Therm1: 1 PCBCells2
+ SG_ PCBCells2_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
 
 
 
