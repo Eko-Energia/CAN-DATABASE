@@ -90,6 +90,27 @@ BO_ 211 PCBCells1_Therm1: 1 PCBCells1
 
 BO_ 212 PCBCells1_Therm2: 1 PCBCells1
 
+BO_ 213 PCBCells1_Therm3: 1 PCBCells1
+ SG_ PCBCells1_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 214 PCBCells1_Therm4: 1 PCBCells1
+ SG_ PCBCells1_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 215 PCBCells1_Therm5: 1 PCBCells1
+ SG_ PCBCells1_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 216 PCBCells1_Therm6: 1 PCBCells1
+ SG_ PCBCells1_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 217 PCBCells1_Therm7: 1 PCBCells1
+ SG_ PCBCells1_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 218 PCBCells1_Therm8: 1 PCBCells1
+ SG_ PCBCells1_Therm8 : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 219 PCBCells1_Therm9: 1 PCBCells1
+ SG_ PCBCells1_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
 
 
 CM_ SG_ 210 Error_Code "Error Code from .csv error file";
@@ -116,4 +137,5 @@ CM_ SG_ 260 Error_Specific_Data "Error Specific data co-related with value, peri
 CM_ SG_ 270 Error_Code "Error code co-related to .csv error file content";
 CM_ SG_ 270 Reserved "Reserved bits";
 CM_ SG_ 270 Error_Specific_Data "Error Specific data, stores value which triggered error";
+CM_ SG_ 213 PCBCells1_Therm3_Temperature "";
 
