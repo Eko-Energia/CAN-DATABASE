@@ -89,58 +89,193 @@ BO_ 270 PCBCells7_NODE: 8 PCBCells7
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 211 PCBCells1_Therm1: 1 PCBCells1
- SG_ PCBCells1_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 212 PCBCells1_Therm2: 1 PCBCells1
- SG_ PCBCells1_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 213 PCBCells1_Therm3: 1 PCBCells1
- SG_ PCBCells1_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 214 PCBCells1_Therm4: 1 PCBCells1
- SG_ PCBCells1_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 215 PCBCells1_Therm5: 1 PCBCells1
- SG_ PCBCells1_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 216 PCBCells1_Therm6: 1 PCBCells1
- SG_ PCBCells1_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 217 PCBCells1_Therm7: 1 PCBCells1
- SG_ PCBCells1_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 218 PCBCells1_Therm8: 1 PCBCells1
- SG_ PCBCells1_Therm8 : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm8 : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 219 PCBCells1_Therm9: 1 PCBCells1
- SG_ PCBCells1_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells1_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 221 PCBCells2_Therm9: 1 PCBCells2
- SG_ PCBCells2_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 222 PCBCells2_Therm8: 1 PCBCells2
- SG_ PCBCells2_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 223 PCBCells2_Therm7: 1 PCBCells2
- SG_ PCBCells2_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 224 PCBCells2_Therm6: 1 PCBCells2
- SG_ PCBCells2_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 225 PCBCells2_Therm5: 1 PCBCells2
- SG_ PCBCells2_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 226 PCBCells2_Therm4: 1 PCBCells2
- SG_ PCBCells2_Therm4_temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm4_temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 227 PCBCells2_Therm3: 1 PCBCells2
- SG_ PCBCells2_Therm3_temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm3_temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 228 PCBCells2_Therm2: 1 PCBCells2
- SG_ PCBCells2_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 BO_ 229 PCBCells2_Therm1: 1 PCBCells2
- SG_ PCBCells2_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+ SG_ PCBCells2_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 231 PCBCells3_Therm1: 1 PCBCells3
+ SG_ PCBCells3_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 232 PCBCells3_Therm2: 1 PCBCells3
+ SG_ PCBCells3_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 233 PCBCells3_Therm3: 1 PCBCells3
+ SG_ PCBCells3_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 234 PCBCells3_Therm4: 1 PCBCells3
+ SG_ PCBCells3_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 235 PCBCells3_Therm5: 1 PCBCells3
+ SG_ PCBCells3_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 236 PCBCells3_Therm6: 1 PCBCells3
+ SG_ PCBCells3_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 237 PCBCells3_Therm7: 1 PCBCells3
+ SG_ PCBCells3_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 238 PCBCells3_Therm8: 1 PCBCells3
+ SG_ PCBCells3_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 239 PCBCells3_Therm9: 1 PCBCells3
+ SG_ PCBCells3_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 241 PCBCells4_Therm9: 1 PCBCells4
+ SG_ PCBCells4_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 242 PCBCells4_Therm8: 1 PCBCells4
+ SG_ PCBCells4_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 243 PCBCells4_Therm7: 1 PCBCells4
+ SG_ PCBCells4_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 244 PCBCells4_Therm6: 1 PCBCells4
+ SG_ PCBCells4_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 245 PCBCells4_Therm5: 1 PCBCells4
+ SG_ PCBCells4_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 246 PCBCells4_Therm4: 1 PCBCells4
+ SG_ PCBCells4_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 247 PCBCells4_Therm3: 1 PCBCells4
+ SG_ PCBCells4_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 248 PCBCells4_Therm2: 1 PCBCells4
+ SG_ PCBCells4_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 249 PCBCells4_Therm1: 1 PCBCells4
+ SG_ PCBCells4_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 251 PCBCells5_Therm1: 1 PCBCells5
+ SG_ PCBCells5_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 252 PCBCells5_Therm2: 1 PCBCells5
+ SG_ PCBCells5_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 253 PCBCells5_Therm3: 1 PCBCells5
+ SG_ PCBCells5_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 254 PCBCells5_Therm4: 1 PCBCells5
+ SG_ PCBCells5_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 255 PCBCells5_Therm5: 1 PCBCells5
+ SG_ PCBCells5_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 256 PCBCells5_Therm6: 1 PCBCells5
+ SG_ PCBCells5_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 257 PCBCells5_Therm7: 1 PCBCells5
+ SG_ PCBCells5_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 258 PCBCells5_Therm8: 1 PCBCells5
+ SG_ PCBCells5_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 259 PCBCells5_Therm9: 1 PCBCells5
+ SG_ PCBCells5_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 261 PCBCells6_Therm9: 1 PCBCells6
+ SG_ PCBCells6_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 262 PCBCells6_Therm8: 1 PCBCells6
+ SG_ PCBCells6_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 263 PCBCells6_Therm7: 1 PCBCells6
+ SG_ PCBCells6_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 264 PCBCells6_Therm6: 1 PCBCells6
+ SG_ PCBCells6_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 265 PCBCells6_Therm5: 1 PCBCells6
+ SG_ PCBCells6_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 266 PCBCells6_Therm4: 1 PCBCells6
+ SG_ PCBCells6_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 267 PCBCells6_Therm3: 1 PCBCells6
+ SG_ PCBCells6_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 268 PCBCells6_Therm2: 1 PCBCells6
+ SG_ PCBCells6_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 269 PCBCells6_Therm1: 1 PCBCells6
+ SG_ PCBCells6_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 271 PCBCells7_Therm1: 1 PCBCells7
+ SG_ PCBCells7_Therm1_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 272 PCBCells7_Therm2: 1 PCBCells7
+ SG_ PCBCells7_Therm2_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 273 PCBCells7_Therm3: 1 PCBCells7
+ SG_ PCBCells7_Therm3_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 274 PCBCells7_Therm4: 1 PCBCells7
+ SG_ PCBCells7_Therm4_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 275 PCBCells7_Therm5: 1 PCBCells7
+ SG_ PCBCells7_Therm5_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 276 PCBCells7_Therm6: 1 PCBCells7
+ SG_ PCBCells7_Therm6_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 277 PCBCells7_Therm7: 1 PCBCells7
+ SG_ PCBCells7_Therm7_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
+
+BO_ 278 PCBCells7_Therm8: 1 PCBCells7
+ SG_ PCBCells7_Therm8_Temperature : 0|8@1+ (0.39216,0) [0|100] "" Vector__XXX
+
+BO_ 279 PCBCells7_Therm9: 1 PCBCells7
+ SG_ PCBCells7_Therm9_Temperature : 0|8@1+ (0.39216,0) [0|100] "C" Vector__XXX
 
 
 
