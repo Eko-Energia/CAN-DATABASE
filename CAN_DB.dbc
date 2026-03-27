@@ -22,6 +22,14 @@ NS_ :
 	SIG_GROUP_
 	SIG_VALTYPE_
 	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
 
 BS_:
 
@@ -31,8 +39,12 @@ BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashb
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
  SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BMSMaster_MasterBatteryTemperatur : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_MasterBatteryTemp_0000 : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
  SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
+ SG_ NewSignal_0002 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AccVal_Start : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ AccVal_Stop : 13|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -79,7 +91,12 @@ BO_ 64 Pedals_NODE: 8 Pedals
 
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
-BO_ 0 SafeState_NODE: 8 SafeState
+BO_ 1 SafeState_NODE: 8 SafeState
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1983 LightsRL_END: 8 LightsRL
 
@@ -291,13 +308,21 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
+BO_ 2 SafeState_StatusOfCircut: 8 SafeState
+ SG_ SafeState_Status_bool : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2 SafeState_AccVal: 8 SafeState
+ SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|0] "g" Vector__XXX
+
+
 
 CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
 CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
-CM_ BO_ 0 "
+CM_ BO_ 1 "
 ";
+CM_ SG_ 1 ErrorCode "Error Code";
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
 ";
 CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
@@ -310,8 +335,12 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 2 AccVal_TrueVal ".05g/byte offset:0 e.g. 200, its corresponding 10g ";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
@@ -332,3 +361,4 @@ VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
 VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+
