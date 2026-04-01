@@ -62,8 +62,6 @@ BO_ 1248 CoolingBack_NODE: 8 CoolingBack
 
 BO_ 1120 MPPT_NODE: 8 MPPT
 
-BO_ 992 Dashboard_NODE: 8 Dashboard
-
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
@@ -108,8 +106,6 @@ BO_ 1311 CoolingLeft_END: 8 CoolingLeft
 BO_ 1375 CoolingMotor_END: 8 CoolingMotor
 
 BO_ 1343 CoolingRight_END: 8 CoolingRight
-
-BO_ 1023 Dashboard_END: 8 Dashboard
 
 BO_ 1151 MPPT_END: 8 MPPT
 
@@ -291,6 +287,23 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
+BO_ 992 Dashboard_Control: 8 Dashboard
+ SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
+ SG_ PRND : 14|8@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 993 Dashboard_Important: 8 Dashboard
+ SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Rain_Level : 8|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 994 Dashboard_Switches: 8 Dashboard
+ SG_ Wiper_Slow : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Fast : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Turn_Signal : 5|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+
 
 CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
@@ -310,6 +323,17 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 992 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
+CM_ SG_ 992 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable."
+CM_ SG_ 993 Light_Switch "Light switch position derived from ADC reading (OFF, POSITION, LOW_BEAM, HIGH_BEAM).";
+CM_ SG_ 993 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
+CM_ SG_ 994 Wiper_Slow "Indicates activation of low-speed windshield wiper mode.";
+CM_ SG_ 994 Wiper_Fast "Indicates activation of high-speed windshield wiper mode.";
+CM_ SG_ 994 Wiper_Rain "Indicates automatic wiper mode activation based on rain sensor input.";
+CM_ SG_ 994 Fluid "Windshield washer fluid level status indication.";
+CM_ SG_ 994 Mode "Operating mode selection for car permormance.";
+CM_ SG_ 994 Turn_Signal "Turn indicator status showing left or right signaling request.";
+CM_ SG_ 994 Emergency "Hazard warning lights activation status.";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
@@ -332,3 +356,13 @@ VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
 VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 992 Gear_Position 0 "Park" 1 "Reverse" 2 "Neutral" 3 "Drive" ;
+VAL_ 993 Light_Switch 0 "Off" 1 "Position" 2 "Low beam" 3 "High beam" ;
+VAL_ 993 Rain_Level 0 "off" 1 "Light" 2 "Medium" 3 "Heavy" ;
+VAL_ 994 Wiper_Slow 0 "Off" 1 "On" ;
+VAL_ 994 Wiper_Fast 0 "Off" 1 "On" ;
+VAL_ 994 Wiper_Rain 0 "Off" 1 "On" ;
+VAL_ 994 Fluid 0 "Off" 1 "On" ;
+VAL_ 994 Mode 0 "Normal" 1 "Expensive" ;
+VAL_ 994 Turn_Signal 0 "3_left" 1 "left 2 "3_right" 3 "right" ;
+VAL_ 994 Emergency 0 "Off" 1 "On" ;
