@@ -51,12 +51,32 @@ BO_ 1888 LightsFL_NODE: 8 LightsFL
 BO_ 1856 LightsFR_NODE: 8 LightsFR
 
 BO_ 1696 SensorRL_NODE: 8 SensorRL
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Sprecific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1664 SensorRR_NODE: 8 SensorRR
+ SG_ Erro_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1632 SensorFL_NODE: 8 SensorFL
+ SG_ Erro_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1600 SensorFR_NODE: 8 SensorFR
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1472 LowVoltConverter_NODE: 8 Converter
 
@@ -299,44 +319,62 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
-BO_ 1601 SensorFR_ABS: 2 SensorFR
- SG_ SensorFR_ABS : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
+ SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
 
 BO_ 1602 SensorFR_Suspension: 2 SensorFR
  SG_ SensorFR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
 
-BO_ 1603 SensorFR_Reed: 1 SensorFR
- SG_ SensorFR_Reed : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1603 SensorFR_Door_Sensor: 1 SensorFR
+ SG_ SensorFR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1633 SensorFL_ABS: 2 SensorFL
- SG_ SensorFL_ABS : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+BO_ 1633 SensorFL_Wheel_Speed: 2 SensorFL
+ SG_ SensorFL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
 
 BO_ 1634 SensorFL_Suspension: 2 SensorFL
  SG_ SensorFL_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
 
-BO_ 1635 SensorFL_Reed: 1 SensorFL
- SG_ SensorFL_Reed : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1635 SensorFL_Door_Sensor: 1 SensorFL
+ SG_ SensorFL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1665 SensorRR_ABS: 2 SensorRR
- SG_ SensorRR_ABS : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+BO_ 1665 SensorRR_Wheel_Speed: 2 SensorRR
+ SG_ SensorRR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
 
 BO_ 1666 SensorRR_Suspension: 2 SensorRR
  SG_ SensorRR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
 
-BO_ 1667 SensorRR_Reed: 1 SensorRR
- SG_ SensorRR_Reed : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1667 SensorRR_Door_Sensor: 1 SensorRR
+ SG_ SensorRR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 1697 SensorRL_ABS: 2 SensorRL
- SG_ SensorRL_ABS : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+BO_ 1697 SensorRL_Wheel_Speed: 2 SensorRL
+ SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
 
 BO_ 1698 SensorRL_Suspension: 2 SensorRL
  SG_ SensorRL_Suspension : 0|16@1+ (0.02,0) [0|55] "m/s" Vector__XXX
 
-BO_ 1699 SensorRL_Reed: 1 SensorRL
- SG_ SensorRL_Reed : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+BO_ 1699 SensorRL_Door_Sensor: 1 SensorRL
+ SG_ SensorRL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
 
 
+CM_ SG_ 1696 Error_Code "Error code from csv error file
+";
+CM_ SG_ 1696 Reserved "Reserved for future use
+";
+CM_ SG_ 1696 Error_Sprecific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1664 Erro_Code "Error code from csv error file";
+CM_ SG_ 1664 Reserved "Reserved for future use
+";
+CM_ SG_ 1664 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1632 Node_Execution_Halted "Error code from csv error file
+";
+CM_ SG_ 1632 Reserved "Reserved for future use";
+CM_ SG_ 1632 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1600 Error_Code "Error code from csv error file
+";
+CM_ SG_ 1600 Reserved "Reserved for future use
+";
+CM_ SG_ 1600 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
