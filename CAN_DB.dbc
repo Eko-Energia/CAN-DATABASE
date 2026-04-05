@@ -327,7 +327,7 @@ BO_ 1921 LightsRR_Status: 1 LightsRR
  SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ middleStop : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sidePosition : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1953 LightsRL_Status: 1 LightsRL
  SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
