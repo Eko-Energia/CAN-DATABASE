@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight EnginesBOTH
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -366,7 +366,7 @@ BO_ 65 Pedals_JTSN_WORKS: 4 Pedals
  SG_ BrakesHall : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ AccelPedal : 24|8@1+ (1,0) [0|100] "%" Vector__XXX
 
-BO_ 0 ENGINES_NMT: 2 EnginesBOTH
+BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
  SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
  SG_ NodeID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
 
