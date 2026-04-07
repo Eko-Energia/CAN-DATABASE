@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight EnginesBOTH
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -104,10 +104,15 @@ BO_ 128 BMSMaster_NODE: 8 BMSMaster
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
-BO_ 0 SafeState_NODE: 8 SafeState
+BO_ 1 SafeState_NODE: 8 SafeState
 
 BO_ 1983 LightsRL_END: 8 LightsRL
 
@@ -355,6 +360,16 @@ BO_ 1698 SensorRL_Suspension: 2 SensorRL
 BO_ 1699 SensorRL_Door_Sensor: 1 SensorRL
  SG_ SensorRL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
+BO_ 65 Pedals_JTSN_WORKS: 4 Pedals
+ SG_ SteeringWheel : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BrakesLinear : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BrakesHall : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ AccelPedal : 24|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 0 ENGINES_NMT: 2 EnginesBOTH
+ SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ NodeID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+
 
 
 CM_ SG_ 1696 Error_Code "Error code from csv error file
@@ -379,7 +394,12 @@ CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
 CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
-CM_ BO_ 0 "
+CM_ SG_ 64 Error_Code "Error code from csv error file
+";
+CM_ SG_ 64 Node_Execution_Halted "";
+CM_ SG_ 64 Reserved "Reserved for future use";
+CM_ SG_ 64 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ BO_ 1 "
 ";
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
 ";
@@ -393,6 +413,18 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 65 SteeringWheel "Steering wheel linear potentiometer (LPF 175mm) readout
+";
+CM_ SG_ 65 BrakesLinear "Brakes linear potentiometers (LPF 25mm) readout
+";
+CM_ SG_ 65 BrakesHall "Brakes Hall readout
+";
+CM_ SG_ 65 AccelPedal "Acceleration pedal readout";
+CM_ SG_ 0 NMT_Command "0x01 - Go To Operational
+0x02 - Go To Stopped
+0x80 - Go To Pre-Operational
+0x81 - Reset Node";
+CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
