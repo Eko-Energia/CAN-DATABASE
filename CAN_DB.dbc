@@ -510,7 +510,7 @@ VAL_ 1921 direction 1 "On" 0 "Off" ;
 VAL_ 1921 positionCircles 1 "On" 0 "Off" ;
 VAL_ 1921 safeState 1 "On" 0 "Off" ;
 VAL_ 1921 middleStop 1 "On" 0 "Off" ;
-VAL_ 1921 sidePosition 1 "On" 0 "Off" ;
+VAL_ 1921 positionSide 1 "On" 0 "Off" ;
 VAL_ 1953 reverse 1 "On" 0 "Off" ;
 VAL_ 1953 sideStop 1 "On" 0 "Off" ;
 VAL_ 1953 direction 1 "On" 0 "Off" ;
