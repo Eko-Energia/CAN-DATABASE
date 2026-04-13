@@ -227,19 +227,19 @@ BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0059,12) [63|87] "V" Vector__XXX
@@ -363,7 +363,6 @@ BO_ 1953 LightsRL_Status: 1 LightsRL
  SG_ positionWhole : 5|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
-
 BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
  SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
 
@@ -469,7 +468,6 @@ BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
-BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
