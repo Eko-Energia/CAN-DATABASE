@@ -85,8 +85,6 @@ BO_ 1472 LowVoltConverter_NODE: 8 Converter
 
 BO_ 1120 MPPT_NODE: 8 MPPT
 
-BO_ 992 Dashboard_NODE: 8 Dashboard
-
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
@@ -136,8 +134,6 @@ BO_ 1311 CoolingLeft_END: 8 CoolingLeft
 BO_ 1375 CoolingMotor_END: 8 CoolingMotor
 
 BO_ 1343 CoolingRight_END: 8 CoolingRight
-
-BO_ 1023 Dashboard_END: 8 Dashboard
 
 BO_ 1151 MPPT_END: 8 MPPT
 
@@ -318,6 +314,34 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB5Therm9Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+
+BO_ 993 Dashboard_Control: 8 Dashboard
+ SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
+ SG_ PRND : 14|8@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 994 Dashboard_Important: 8 Dashboard
+ SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Rain_Level : 8|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 995 Dashboard_Switches: 8 Dashboard
+ SG_ Wiper_Slow : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Fast : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Turn_Signal_Left : 5|1@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Turn_Signal_Right : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 992 Dashboard_NODE: 8 Dashboard
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1023 Dashboard_END: 8 Dashboard
+
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
  SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -512,6 +536,19 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
+CM_ SG_ 993 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
+CM_ SG_ 994 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
+CM_ SG_ 995 Wiper_Slow "Indicates activation of low-speed windshield wiper mode.";
+CM_ SG_ 995 Wiper_Fast "Indicates activation of high-speed windshield wiper mode.";
+CM_ SG_ 995 Wiper_Rain "Indicates automatic wiper mode activation based on rain sensor input.";
+CM_ SG_ 995 Fluid "Windshield washer fluid level status indication.";
+CM_ SG_ 995 Mode "Operating mode selection for car permormance.";
+CM_ SG_ 995 Turn_Signal_Left "Turn indicator status showing left.
+";
+CM_ SG_ 995 Turn_Signal_Right "Turn indicator status showing right.
+";
+CM_ SG_ 995 Emergency "Hazard warning lights activation status.";
 CM_ SG_ 65 SteeringWheel "Steering wheel linear potentiometer (LPF 175mm) readout
 ";
 CM_ SG_ 65 BrakesLinear "Brakes linear potentiometers (LPF 25mm) readout
@@ -553,6 +590,15 @@ VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
 VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 994 Light_Switch 0 "Off" 1 "Position" 2 "Low beam" 3 "High beam" ;
+VAL_ 994 Rain_Level 0 "off" 1 "Light" 2 "Medium" 3 "Heavy" ;
+VAL_ 995 Wiper_Slow 0 "Off" 1 "On" ;
+VAL_ 995 Wiper_Fast 0 "Off" 1 "On" ;
+VAL_ 995 Wiper_Rain 0 "Off" 1 "On" ;
+VAL_ 995 Fluid 0 "Off" 1 "On" ;
+VAL_ 995 Mode 0 "Normal" 1 "Expensive" ;
+VAL_ 995 Turn_Signal_Left 0 "Off" 1 "On" ;
+VAL_ 995 Turn_Signal_Right 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
 VAL_ 1857 direction 1 "On" 0 "Off" ;
