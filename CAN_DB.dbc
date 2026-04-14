@@ -45,6 +45,7 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ AccVal_Start : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ AccVal_Stop : 13|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ SafeState_Status_bool : 0|8@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -308,9 +309,6 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
-BO_ 2 SafeState_StatusOfCircut: 8 SafeState
- SG_ SafeState_Status_bool : 0|8@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 2 SafeState_AccVal: 8 SafeState
  SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|0] "g" Vector__XXX
 
@@ -335,7 +333,7 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 2 AccVal_TrueVal ".05g/byte offset:0 e.g. 200, its corresponding 10g ";
+CM_ SG_ 2 AccVal_TrueVal "";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
