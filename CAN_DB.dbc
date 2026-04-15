@@ -33,7 +33,7 @@ NS_ :
 
 BS_:
 
-BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight
+BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
 
 BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
@@ -41,8 +41,6 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
  SG_ BMSMaster_MasterBatteryTemp_0000 : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
  SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
- SG_ NewSignal_0002 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
  SG_ AccVal_Start : 0|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ AccVal_Stop : 13|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ SafeState_Status_bool : 0|8@1+ (1,0) [0|0] "" Vector__XXX
@@ -56,26 +54,36 @@ BO_ 1888 LightsFL_NODE: 8 LightsFL
 BO_ 1856 LightsFR_NODE: 8 LightsFR
 
 BO_ 1696 SensorRL_NODE: 8 SensorRL
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Sprecific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1664 SensorRR_NODE: 8 SensorRR
+ SG_ Erro_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1632 SensorFL_NODE: 8 SensorFL
+ SG_ Erro_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1600 SensorFR_NODE: 8 SensorFR
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1472 LowVoltConverter_NODE: 8 Converter
 
-BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
-
-BO_ 1312 CoolingRight_NODE: 8 CoolingRight
-
-BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
-
-BO_ 1248 CoolingBack_NODE: 8 CoolingBack
-
 BO_ 1120 MPPT_NODE: 8 MPPT
-
-BO_ 992 Dashboard_NODE: 8 Dashboard
 
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
@@ -89,6 +97,11 @@ BO_ 128 BMSMaster_NODE: 8 BMSMaster
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 64 Pedals_NODE: 8 Pedals
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
@@ -126,8 +139,6 @@ BO_ 1311 CoolingLeft_END: 8 CoolingLeft
 BO_ 1375 CoolingMotor_END: 8 CoolingMotor
 
 BO_ 1343 CoolingRight_END: 8 CoolingRight
-
-BO_ 1023 Dashboard_END: 8 Dashboard
 
 BO_ 1151 MPPT_END: 8 MPPT
 
@@ -209,19 +220,19 @@ BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3CommunicationState : 36|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0059,12) [63|87] "V" Vector__XXX
@@ -313,7 +324,204 @@ BO_ 2 SafeState_AccVal: 8 SafeState
  SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|0] "g" Vector__XXX
 
 
+BO_ 993 Dashboard_Control: 8 Dashboard
+ SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
+ SG_ PRND : 14|8@1+ (1,0) [0|3] "" Vector__XXX
 
+BO_ 994 Dashboard_Important: 8 Dashboard
+ SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Rain_Level : 8|8@1+ (1,0) [0|4] "" Vector__XXX
+
+BO_ 995 Dashboard_Switches: 8 Dashboard
+ SG_ Wiper_Slow : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Fast : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Turn_Signal_Left : 5|1@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Turn_Signal_Right : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 992 Dashboard_NODE: 8 Dashboard
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1023 Dashboard_END: 8 Dashboard
+
+
+BO_ 1857 LightsFR_Status: 1 LightsFR
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1889 LightsFL_Status: 1 LightsFL
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1921 LightsRR_Status: 1 LightsRR
+ SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ middleStop : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1953 LightsRL_Status: 1 LightsRL
+ SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionWhole : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
+ SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+
+BO_ 1602 SensorFR_Suspension: 2 SensorFR
+ SG_ SensorFR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
+
+BO_ 1603 SensorFR_Door_Sensor: 1 SensorFR
+ SG_ SensorFR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1633 SensorFL_Wheel_Speed: 2 SensorFL
+ SG_ SensorFL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+
+BO_ 1634 SensorFL_Suspension: 2 SensorFL
+ SG_ SensorFL_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
+
+BO_ 1635 SensorFL_Door_Sensor: 1 SensorFL
+ SG_ SensorFL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1665 SensorRR_Wheel_Speed: 2 SensorRR
+ SG_ SensorRR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+
+BO_ 1666 SensorRR_Suspension: 2 SensorRR
+ SG_ SensorRR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
+
+BO_ 1667 SensorRR_Door_Sensor: 1 SensorRR
+ SG_ SensorRR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 1697 SensorRL_Wheel_Speed: 2 SensorRL
+ SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+
+BO_ 1698 SensorRL_Suspension: 2 SensorRL
+ SG_ SensorRL_Suspension : 0|16@1+ (0.02,0) [0|55] "m/s" Vector__XXX
+
+BO_ 1699 SensorRL_Door_Sensor: 1 SensorRL
+ SG_ SensorRL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 65 Pedals_JTSN_WORKS: 4 Pedals
+ SG_ SteeringWheel : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BrakesLinear : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ BrakesHall : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
+ SG_ AccelPedal : 24|8@1+ (1,0) [0|100] "%" Vector__XXX
+
+BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
+ SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
+ SG_ NodeID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
+
+BO_ 1249 CoolingBack_Fan: 8 CoolingBack
+ SG_ CoolingBack_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingBack_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1248 CoolingBack_NODE: 8 CoolingBack
+ SG_ CoolingBack_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Node_Execution__0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1282 CoolingLeft_Fan: 8 CoolingLeft
+ SG_ CoolingLeft_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingLeft_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
+ SG_ CoolingLeft_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Node_Execution__0001 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1281 CoolingLeft_Sensor: 8 CoolingLeft
+ SG_ CoolingLeft_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
+ SG_ CoolingLeft_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+
+BO_ 1283 CoolingLeft_Serwo: 8 CoolingLeft
+ SG_ CoolingLeft_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingLeft_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1346 CoolingMotor_Fan: 8 CoolingMotor
+ SG_ CoolingMotor_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingMotor_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
+ SG_ CoolingMotor_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Node_Execution_0003 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1345 CoolingMotor_Sensor: 8 CoolingMotor
+ SG_ CoolingMotor_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
+ SG_ CoolingMotor_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+
+BO_ 1347 CoolingMotor_Serwo: 8 CoolingMotor
+ SG_ CoolingMotor_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingMotor_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1314 CoolingRight_Fan: 8 CoolingRight
+ SG_ CoolingRight_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingRight_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 1312 CoolingRight_NODE: 8 CoolingRight
+ SG_ CoolingRight_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingRight_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingRight_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingRight_Node_Execution_0004 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingRight_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1313 CoolingRight_Sensor: 8 CoolingRight
+ SG_ CoolingRight_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
+ SG_ CoolingRight_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+
+BO_ 1315 CoolingRight_Serwo: 8 CoolingRight
+ SG_ CoolingRight_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingRight_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
+
+
+CM_ SG_ 1696 Error_Code "Error code from csv error file
+";
+CM_ SG_ 1696 Reserved "Reserved for future use
+";
+CM_ SG_ 1696 Error_Sprecific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1664 Erro_Code "Error code from csv error file";
+CM_ SG_ 1664 Reserved "Reserved for future use
+";
+CM_ SG_ 1664 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1632 Node_Execution_Halted "Error code from csv error file
+";
+CM_ SG_ 1632 Reserved "Reserved for future use";
+CM_ SG_ 1632 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
+CM_ SG_ 1600 Error_Code "Error code from csv error file
+";
+CM_ SG_ 1600 Reserved "Reserved for future use
+";
+CM_ SG_ 1600 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
@@ -334,11 +542,40 @@ CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value whi
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 2 AccVal_TrueVal "";
+CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
+CM_ SG_ 993 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
+CM_ SG_ 994 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
+CM_ SG_ 995 Wiper_Slow "Indicates activation of low-speed windshield wiper mode.";
+CM_ SG_ 995 Wiper_Fast "Indicates activation of high-speed windshield wiper mode.";
+CM_ SG_ 995 Wiper_Rain "Indicates automatic wiper mode activation based on rain sensor input.";
+CM_ SG_ 995 Fluid "Windshield washer fluid level status indication.";
+CM_ SG_ 995 Mode "Operating mode selection for car permormance.";
+CM_ SG_ 995 Turn_Signal_Left "Turn indicator status showing left.
+";
+CM_ SG_ 995 Turn_Signal_Right "Turn indicator status showing right.
+";
+CM_ SG_ 995 Emergency "Hazard warning lights activation status.";
+CM_ SG_ 65 SteeringWheel "Steering wheel linear potentiometer (LPF 175mm) readout
+";
+CM_ SG_ 65 BrakesLinear "Brakes linear potentiometers (LPF 25mm) readout
+";
+CM_ SG_ 65 BrakesHall "Brakes Hall readout
+";
+CM_ SG_ 65 AccelPedal "Acceleration pedal readout";
+CM_ SG_ 0 NMT_Command "0x01 - Go To Operational
+0x02 - Go To Stopped
+0x80 - Go To Pre-Operational
+0x81 - Reset Node";
+CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
+BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
