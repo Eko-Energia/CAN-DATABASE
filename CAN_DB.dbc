@@ -36,15 +36,6 @@ BS_:
 BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
 
-BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
- SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BMSMaster_MasterBatteryTemp_0000 : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
- SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
- SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0002 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0001 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
 BO_ 1920 LightsRR_NODE: 8 LightsRR
@@ -106,6 +97,11 @@ BO_ 64 Pedals_NODE: 8 Pedals
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
 BO_ 1 SafeState_NODE: 8 SafeState
+ SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1983 LightsRL_END: 8 LightsRL
 
@@ -315,6 +311,9 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
+BO_ 2 SafeState_AccVal: 8 SafeState
+ SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|0] "g" Vector__XXX
+
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
  SG_ PRND : 14|8@1+ (1,0) [0|3] "" Vector__XXX
@@ -341,7 +340,6 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1023 Dashboard_END: 8 Dashboard
-
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
  SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -517,13 +515,9 @@ CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
 CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
-CM_ SG_ 64 Error_Code "Error code from csv error file
-";
-CM_ SG_ 64 Node_Execution_Halted "";
-CM_ SG_ 64 Reserved "Reserved for future use";
-CM_ SG_ 64 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
 CM_ BO_ 1 "
 ";
+CM_ SG_ 1 ErrorCode "Error Code";
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
 ";
 CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
@@ -536,6 +530,7 @@ CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 2 AccVal_TrueVal ".05g/byte offset:0 e.g. 200, its corresponding 10g";
 CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
 CM_ SG_ 993 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
 CM_ SG_ 994 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
@@ -565,66 +560,4 @@ BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
-BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
-BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
-VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
-VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
-VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
-VAL_ 2566869221 Charger1StaringState 0 "Charging" 1 "Turn off" ;
-VAL_ 2566869221 Charger1CommunicationState 0 "Normal" 1 "Time-out" ;
-VAL_ 1830 LeftMotorNMTState 0 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
-VAL_ 1831 RightMotorNMTState 9 "BootUp" 4 "Stopped" 5 "Operational" 127 "Pre-Operational" ;
-VAL_ 2566869223 Charger2HardwareFailure 0 "Normal" 1 "Hardware failure" ;
-VAL_ 2566869223 Charger2Temperature 0 "Normal" 1 "Over temp protection" ;
-VAL_ 2566869223 Charger2InputVoltage 0 "Normal" 1 "Wrong" ;
-VAL_ 2566869223 Charger2StaringState 0 "Charging" 1 "Turn off" ;
-VAL_ 2566869223 Charger2CommunicationState 0 "Normal" 1 "Time-out" ;
-VAL_ 2566869224 Charger3HardwareFailure 0 "Normal" 1 "Hardware failure" ;
-VAL_ 2566869224 Charger3Temperature 0 "Normal" 1 "Over temp protection" ;
-VAL_ 2566869224 Charger3InputVoltage 0 "Normal" 1 "Wrong" ;
-VAL_ 2566869224 Charger3StaringState 0 "Charging" 1 "Turn off" ;
-VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
-VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
-VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
-VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
-VAL_ 994 Light_Switch 0 "Off" 1 "Position" 2 "Low beam" 3 "High beam" ;
-VAL_ 994 Rain_Level 0 "off" 1 "Light" 2 "Medium" 3 "Heavy" ;
-VAL_ 995 Wiper_Slow 0 "Off" 1 "On" ;
-VAL_ 995 Wiper_Fast 0 "Off" 1 "On" ;
-VAL_ 995 Wiper_Rain 0 "Off" 1 "On" ;
-VAL_ 995 Fluid 0 "Off" 1 "On" ;
-VAL_ 995 Mode 0 "Normal" 1 "Expensive" ;
-VAL_ 995 Turn_Signal_Left 0 "Off" 1 "On" ;
-VAL_ 995 Turn_Signal_Right 1 "On" 0 "Off" ;
-VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
-VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
-VAL_ 1857 direction 1 "On" 0 "Off" ;
-VAL_ 1857 day 1 "On" 0 "Off" ;
-VAL_ 1857 sideDirection 1 "On" 0 "Off" ;
-VAL_ 1857 headlights 1 "On" 0 "Off" ;
-VAL_ 1857 highBeams 1 "On" 0 "Off" ;
-VAL_ 1889 smallLens1 1 "On" 0 "Off" ;
-VAL_ 1889 smallLens2 1 "On" 0 "Off" ;
-VAL_ 1889 direction 1 "On" 0 "Off" ;
-VAL_ 1889 day 1 "On" 0 "Off" ;
-VAL_ 1889 sideDirection 1 "On" 0 "Off" ;
-VAL_ 1889 headlights 1 "On" 0 "Off" ;
-VAL_ 1889 highBeams 1 "On" 0 "Off" ;
-VAL_ 1921 reverse 1 "On" 0 "Off" ;
-VAL_ 1921 sideStop 1 "On" 0 "Off" ;
-VAL_ 1921 direction 1 "On" 0 "Off" ;
-VAL_ 1921 positionCircles 1 "On" 0 "Off" ;
-VAL_ 1921 safeState 1 "On" 0 "Off" ;
-VAL_ 1921 middleStop 1 "On" 0 "Off" ;
-VAL_ 1921 positionSide 1 "On" 0 "Off" ;
-VAL_ 1953 reverse 1 "On" 0 "Off" ;
-VAL_ 1953 sideStop 1 "On" 0 "Off" ;
-VAL_ 1953 direction 1 "On" 0 "Off" ;
-VAL_ 1953 positionCircles 1 "On" 0 "Off" ;
-VAL_ 1953 safeState 1 "On" 0 "Off" ;
-VAL_ 1953 positionWhole 1 "On" 0 "Off" ;
-VAL_ 1953 positionSide 1 "On" 0 "Off" ;
 
