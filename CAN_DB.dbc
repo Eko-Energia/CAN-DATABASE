@@ -234,86 +234,86 @@ BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.1465,300) [-300|300] "A" Vector__XXX
  SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.024,50) [0|100] "C" Vector__XXX
 
-BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm1Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm1Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm1Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm1Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm1Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm1Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 131 BMSMaster_PCBsTemp1: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp1 : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp1 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp1 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp1 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp1 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp1 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp1 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 132 BMSMaster_PCBsTherm2Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm2Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm2Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm2Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm2Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm2Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm2Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm2Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 132 BMSMaster_PCBsTemp2: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp2 : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp2 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp2 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp2 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp2 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp2 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp2 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 133 BMSMaster_PCBsTherm3Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm3Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm3Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm3Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm3Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm3Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm3Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm3Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+BO_ 133 BMSMaster_PCBsTemp3: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp3 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp3 : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp3 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp3 : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp3 : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp3 : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp3 : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
-BO_ 134 BMSMaster_PCBsTherm4Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm4Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm4Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm4Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm4Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm4Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm4Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm4Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 134 BMSMaster_PCBsTemp4: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp4 : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp4 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp4 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp4 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp4 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp4 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp4 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 135 BMSMaster_PCBsTherm5Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm5Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm5Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm5Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm5Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm5Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm5Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm5Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 135 BMSMaster_PCBsTemp5: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp5 : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp5 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp5 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp5 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp5 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp5 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp5 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 136 BMSMaster_PCBsTherm6Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm6Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm6Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm6Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm6Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm6Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm6Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm6Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 136 BMSMaster_PCBsTemp6: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp6 : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp6 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp6 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp6 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp6 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp6 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp6 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 137 BMSMaster_PCBsTherm7Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm7Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm7Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm7Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm7Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm7Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm7Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm7Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+BO_ 137 BMSMaster_PCBsTemp7: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp7 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp7 : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp7 : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp7 : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp7 : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp7 : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp7 : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
 
-BO_ 138 BMSMaster_PCBsTherm8Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm8Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm8Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm8Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm8Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm8Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm8Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm8Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+BO_ 138 BMSMaster_PCBsTemp8: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp8 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp8 : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB3Temp8 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp8 : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp8 : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp8 : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp8 : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
-BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm9Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm9Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB13herm9Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm9Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm9Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+BO_ 139 BMSMaster_PCBsTemp9: 7 BMSMaster
+ SG_ BMSMaster_PCB1Temp9 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB2Temp9 : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB13emp9 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB4Temp9 : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB5Temp9 : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB6Temp9 : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB7Temp9 : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
@@ -341,7 +341,6 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1023 Dashboard_END: 8 Dashboard
-
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
  SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -533,9 +532,19 @@ CM_ SG_ 2550589428 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its correspon
 CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
 CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
 CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
+CM_ BO_ 130 "Temperatura termistora, napiêcie baterii, pr¹d poboru";
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ BO_ 131 "Temperatury termistorów Nr 1 na wszystkich 7 PCB ogniw";
+CM_ BO_ 132 "Temperatury termistorów Nr 2 na wszystkich 7 PCB ogniw";
+CM_ BO_ 133 "Temperatury termistorów Nr 3 na wszystkich 7 PCB ogniw";
+CM_ BO_ 134 "Temperatury termistorów Nr 4 na wszystkich 7 PCB ogniw";
+CM_ BO_ 135 "Temperatury termistorów Nr 5 na wszystkich 7 PCB ogniw";
+CM_ BO_ 136 "Temperatury termistorów Nr 6 na wszystkich 7 PCB ogniw";
+CM_ BO_ 137 "Temperatury termistorów Nr 7 na wszystkich 7 PCB ogniw";
+CM_ BO_ 138 "Temperatury termistorów Nr 8 na wszystkich 7 PCB ogniw";
+CM_ BO_ 139 "Temperatury termistorów Nr 9 na wszystkich 7 PCB ogniw";
 CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
 CM_ SG_ 993 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
 CM_ SG_ 994 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
@@ -565,7 +574,17 @@ BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
-BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
+BA_ "GenMsgCycleTime" BO_ 128 5000;
+BA_ "GenMsgCycleTime" BO_ 130 200;
+BA_ "GenMsgCycleTime" BO_ 131 100;
+BA_ "GenMsgCycleTime" BO_ 132 100;
+BA_ "GenMsgCycleTime" BO_ 133 100;
+BA_ "GenMsgCycleTime" BO_ 134 100;
+BA_ "GenMsgCycleTime" BO_ 135 100;
+BA_ "GenMsgCycleTime" BO_ 136 100;
+BA_ "GenMsgCycleTime" BO_ 137 100;
+BA_ "GenMsgCycleTime" BO_ 138 100;
+BA_ "GenMsgCycleTime" BO_ 139 100;
 BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
