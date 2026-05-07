@@ -342,42 +342,41 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
 
 BO_ 1023 Dashboard_END: 8 Dashboard
 
-
 BO_ 1857 LightsFR_Status: 1 LightsFR
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1889 LightsFL_Status: 1 LightsFL
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1921 LightsRR_Status: 1 LightsRR
- SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ middleStop : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ middleStop : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1953 LightsRL_Status: 1 LightsRL
- SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionWhole : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionWhole : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
  SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
@@ -433,7 +432,7 @@ BO_ 1248 CoolingBack_NODE: 8 CoolingBack
  SG_ CoolingBack_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingBack_Node_Execution__0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Node_Execution__0001 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1282 CoolingLeft_Fan: 8 CoolingLeft
@@ -444,7 +443,7 @@ BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
  SG_ CoolingLeft_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingLeft_Node_Execution__0001 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Node_Execution__0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1281 CoolingLeft_Sensor: 8 CoolingLeft
@@ -566,8 +565,8 @@ BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
-BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0001 "CoolingBack_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0002 "CoolingLeft_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
