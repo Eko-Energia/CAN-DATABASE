@@ -88,6 +88,11 @@ BO_ 1120 MPPT_NODE: 8 MPPT
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Sprecific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 128 BMSMaster_NODE: 8 BMSMaster
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
