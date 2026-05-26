@@ -309,7 +309,7 @@ BO_ 138 BMSMaster_PCBsTemp8: 7 BMSMaster
 BO_ 139 BMSMaster_PCBsTemp9: 7 BMSMaster
  SG_ PCB1Temp9 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB2Temp9 : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ PCB13emp9 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ PCB1Temp9 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB4Temp9 : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB5Temp9 : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB6Temp9 : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
