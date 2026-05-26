@@ -88,6 +88,11 @@ BO_ 1120 MPPT_NODE: 8 MPPT
 BO_ 864 SmallBMS_NODE: 8 SmallBMS
 
 BO_ 192 RCD_STATIC_NODE: 8 RCD
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Sprecific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 128 BMSMaster_NODE: 8 BMSMaster
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -309,15 +314,15 @@ BO_ 138 BMSMaster_PCBsTemp8: 7 BMSMaster
 BO_ 139 BMSMaster_PCBsTemp9: 7 BMSMaster
  SG_ PCB1Temp9 : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB2Temp9 : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ PCB1Temp9 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ PCB3Temp9 : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB4Temp9 : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB5Temp9 : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB6Temp9 : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
  SG_ PCB7Temp9 : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
 BO_ 993 Dashboard_Control: 8 Dashboard
- SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
- SG_ PRND : 14|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
+ SG_ PRND : 14|8@1+ (1,0) [0|3] ""  RCD
 
 BO_ 994 Dashboard_Important: 8 Dashboard
  SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
@@ -492,6 +497,9 @@ BO_ 1315 CoolingRight_Serwo: 8 CoolingRight
  SG_ CoolingRight_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingRight_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
+BO_ 193 RCD_Status: 8 RCD
+ SG_ ChargingPortStatus : 0|2@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 CM_ SG_ 1696 Error_Code "Error code from csv error file
@@ -589,6 +597,7 @@ BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingB
 BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
+BA_ "GenMsgCycleTime" BO_ 193 1000;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
@@ -646,4 +655,5 @@ VAL_ 1953 positionCircles 1 "On" 0 "Off" ;
 VAL_ 1953 safeState 1 "On" 0 "Off" ;
 VAL_ 1953 positionWhole 1 "On" 0 "Off" ;
 VAL_ 1953 positionSide 1 "On" 0 "Off" ;
+VAL_ 193 ChargingPortStatus 0 "Disconnected" 1 "Connected" 2 "Charging" ;
 
