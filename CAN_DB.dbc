@@ -312,7 +312,7 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
 
 BO_ 2 SafeState_AccVal: 8 SafeState
- SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|0] "g" Vector__XXX
+ SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|12] "g" Vector__XXX
 
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg" Vector__XXX
