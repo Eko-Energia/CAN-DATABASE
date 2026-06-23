@@ -168,9 +168,9 @@ BO_ 422 EngineLeft_STATIC_TPDO1: 8 EngineLeft
  SG_ LeftMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
 
 BO_ 678 EngineLeft_STATIC_TPDO2: 8 EngineLeft
- SG_ LeftMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
- SG_ LeftMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
- SG_ LeftMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ LeftMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C"  CoolingMotor
+ SG_ LeftMotorContactorState : 16|8@1+ (1,0) [0|10] ""  CoolingMotor
+ SG_ LeftMotorEMBrakeState : 24|8@1+ (1,0) [0|4] ""  CoolingMotor
 
 BO_ 1830 EngineLeft_STATIC_NMT: 1 EngineLeft
  SG_ LeftMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
@@ -194,9 +194,9 @@ BO_ 423 EngineRight_STATIC_TPDO1: 8 EngineRight
  SG_ RightMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
 
 BO_ 679 EngineRight_STATIC_TPDO2: 8 EngineRight
- SG_ RightMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C" Vector__XXX
- SG_ RightMotorContactorState : 16|8@1+ (1,0) [0|10] "" Vector__XXX
- SG_ RightMotorEMBrakeState : 24|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ RightMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C"  CoolingMotor
+ SG_ RightMotorContactorState : 16|8@1+ (1,0) [0|10] ""  CoolingMotor
+ SG_ RightMotorEMBrakeState : 24|8@1+ (1,0) [0|4] ""  CoolingMotor
 
 BO_ 551 JETSON_STATIC_EngineRight_RPDO1: 8 JETSON
  SG_ RightMotorThrottleComand : 0|16@1- (1,0) [-32768|32767] "" Vector__XXX
@@ -240,85 +240,85 @@ BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.024,50) [0|100] "C"  RCD
 
 BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm1Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm1Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm1Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm1Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm1Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm1Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB2Therm1Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB3Therm1Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB4Therm1Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB5Therm1Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB6Therm1Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB7Therm1Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
 
 BO_ 132 BMSMaster_PCBsTherm2Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm2Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm2Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm2Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm2Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm2Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm2Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm2Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm2Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB2Therm2Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB3Therm2Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB4Therm2Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB5Therm2Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB6Therm2Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB7Therm2Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
 
 BO_ 133 BMSMaster_PCBsTherm3Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm3Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm3Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm3Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm3Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm3Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm3Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm3Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm3Temp : 0|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB2Therm3Temp : 8|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB3Therm3Temp : 16|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB4Therm3Temp : 24|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB5Therm3Temp : 32|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB6Therm3Temp : 40|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB7Therm3Temp : 48|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
 
 BO_ 134 BMSMaster_PCBsTherm4Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm4Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm4Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm4Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm4Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm4Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm4Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm4Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm4Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB2Therm4Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB3Therm4Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB4Therm4Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB5Therm4Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB6Therm4Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB7Therm4Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
 
 BO_ 135 BMSMaster_PCBsTherm5Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm5Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm5Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm5Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm5Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm5Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm5Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm5Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm5Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB2Therm5Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB3Therm5Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB4Therm5Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB5Therm5Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB6Therm5Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB7Therm5Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
 
 BO_ 136 BMSMaster_PCBsTherm6Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm6Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm6Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm6Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm6Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm6Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm6Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm6Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm6Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB2Therm6Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB3Therm6Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB4Therm6Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB5Therm6Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB6Therm6Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB7Therm6Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
 
 BO_ 137 BMSMaster_PCBsTherm7Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm7Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm7Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm7Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm7Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm7Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm7Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm7Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm7Temp : 0|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB2Therm7Temp : 8|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB3Therm7Temp : 16|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB4Therm7Temp : 24|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB5Therm7Temp : 32|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB6Therm7Temp : 40|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB7Therm7Temp : 48|8@1+ (0.39216,49.8039) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
 
 BO_ 138 BMSMaster_PCBsTherm8Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm8Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm8Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB3Therm8Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm8Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm8Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm8Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm8Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm8Temp : 0|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB2Therm8Temp : 8|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB3Therm8Temp : 16|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB4Therm8Temp : 24|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB5Therm8Temp : 32|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB6Therm8Temp : 40|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
+ SG_ BMSMaster_PCB7Therm8Temp : 48|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingRight,CoolingMotor,CoolingLeft
 
 BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
- SG_ BMSMaster_PCB1Therm9Temp : 0|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB2Therm9Temp : 8|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB13herm9Temp : 16|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB4Therm9Temp : 24|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB5Therm9Temp : 32|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
- SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_PCB1Therm9Temp : 0|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB2Therm9Temp : 8|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB13herm9Temp : 16|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB4Therm9Temp : 24|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB5Therm9Temp : 32|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
+ SG_ BMSMaster_PCB7Therm9Temp : 48|8@1+ (0.39216,49) [0|100] "C"  CoolingBack,CoolingMotor,CoolingRight,CoolingLeft
 
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
@@ -430,14 +430,14 @@ BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
  SG_ NodeID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
 
 BO_ 1249 CoolingBack_Fan: 8 CoolingBack
- SG_ CoolingBack_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ CoolingBack_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ CoolingBack_SpeedF1 : 0|8@1+ (1,0) [0|100] ""  BMSMaster
+ SG_ CoolingBack_SpeedF2 : 8|8@1+ (1,0) [0|100] ""  BMSMaster
 
 BO_ 1248 CoolingBack_NODE: 8 CoolingBack
  SG_ CoolingBack_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingBack_Node_Execution__0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingBack_Node_Execution__0000 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1282 CoolingLeft_Fan: 8 CoolingLeft
@@ -467,7 +467,7 @@ BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
  SG_ CoolingMotor_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingMotor_Node_Execution_0003 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Node_Execution_0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1345 CoolingMotor_Sensor: 8 CoolingMotor
@@ -486,7 +486,7 @@ BO_ 1312 CoolingRight_NODE: 8 CoolingRight
  SG_ CoolingRight_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingRight_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingRight_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingRight_Node_Execution_0004 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingRight_Node_Execution_0003 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingRight_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1313 CoolingRight_Sensor: 8 CoolingRight
@@ -576,10 +576,10 @@ BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589428 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589684 1000;
-BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0000 "CoolingBack_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0002 "CoolingMotor_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0003 "CoolingRight_Node_Execution_Halted";
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
