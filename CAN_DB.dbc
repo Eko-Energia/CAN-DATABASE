@@ -618,6 +618,7 @@ VAL_ 2566869224 Charger3CommunicationState 0 "Normal" 1 "Time-out" ;
 VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
+VAL_ 993 PRND 0 "P" 1 "R" 2 "N" 3 "D" ;
 VAL_ 995 Status 0 "OFF" 1 "ONCE" 2 "INTERVAL" 3 "LOW" 4 "HIGH" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
