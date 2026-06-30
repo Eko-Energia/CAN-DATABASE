@@ -333,7 +333,7 @@ BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
 
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
- SG_ PRND : 16|2@1+ (1,0) [0|3] ""  RCD
+ SG_ PRND : 14|2@1+ (1,0) [0|3] ""  RCD
 
 BO_ 995 Dashboard_Wipers: 1 Dashboard
  SG_ Status : 0|3@1+ (1,0) [0|7] "" Vector__XXX
@@ -345,7 +345,7 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
  SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1023 Dashboard_END: 8 Dashboard
+BO_ 1023 Dashboard_END: 0 Dashboard
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
  SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -506,7 +506,7 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
  SG_ TurnSignal_Right : 5|2@1+ (1,0) [0|3] "" Vector__XXX
  SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
 
-BO_ 996 Dashboard_CC: 8 Dashboard
+BO_ 996 Dashboard_CC: 0 Dashboard
 
 
 
