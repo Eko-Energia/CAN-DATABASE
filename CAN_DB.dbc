@@ -143,13 +143,13 @@ BO_ 895 SmallBMS_END: 8 SmallBMS
 
 BO_ 1503 LowVoltConverter_END: 8 Converter
 
-BO_ 1279 CoolingBack_END: 8 CoolingBack
+BO_ 1279 CoolingBack_END: 0 CoolingBack
 
-BO_ 1311 CoolingLeft_END: 8 CoolingLeft
+BO_ 1311 CoolingLeft_END: 0 CoolingLeft
 
-BO_ 1375 CoolingMotor_END: 8 CoolingMotor
+BO_ 1375 CoolingMotor_END: 0 CoolingMotor
 
-BO_ 1343 CoolingRight_END: 8 CoolingRight
+BO_ 1343 CoolingRight_END: 0 CoolingRight
 
 BO_ 1151 MPPT_END: 8 MPPT
 
@@ -429,7 +429,7 @@ BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
  SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
  SG_ NodeID : 8|8@1+ (1,0) [0|255] "-" Vector__XXX
 
-BO_ 1249 CoolingBack_Fan: 8 CoolingBack
+BO_ 1249 CoolingBack_Fan: 2 CoolingBack
  SG_ CoolingBack_SpeedF1 : 0|8@1+ (1,0) [0|100] ""  BMSMaster
  SG_ CoolingBack_SpeedF2 : 8|8@1+ (1,0) [0|100] ""  BMSMaster
 
@@ -440,7 +440,7 @@ BO_ 1248 CoolingBack_NODE: 8 CoolingBack
  SG_ CoolingBack_Node_Execution__0000 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingBack_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1282 CoolingLeft_Fan: 8 CoolingLeft
+BO_ 1282 CoolingLeft_Fan: 2 CoolingLeft
  SG_ CoolingLeft_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingLeft_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
@@ -448,18 +448,18 @@ BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
  SG_ CoolingLeft_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingLeft_Node_Execution__0001 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingLeft_Node_Execution__0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingLeft_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1281 CoolingLeft_Sensor: 8 CoolingLeft
+BO_ 1281 CoolingLeft_Sensor: 4 CoolingLeft
  SG_ CoolingLeft_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
  SG_ CoolingLeft_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
 
-BO_ 1283 CoolingLeft_Serwo: 8 CoolingLeft
+BO_ 1283 CoolingLeft_Serwo: 2 CoolingLeft
  SG_ CoolingLeft_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingLeft_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
-BO_ 1346 CoolingMotor_Fan: 8 CoolingMotor
+BO_ 1346 CoolingMotor_Fan: 2 CoolingMotor
  SG_ CoolingMotor_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingMotor_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
@@ -467,18 +467,18 @@ BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
  SG_ CoolingMotor_ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
- SG_ CoolingMotor_Node_Execution_0002 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ CoolingMotor_Node_Execution_0001 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingMotor_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1345 CoolingMotor_Sensor: 8 CoolingMotor
+BO_ 1345 CoolingMotor_Sensor: 4 CoolingMotor
  SG_ CoolingMotor_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
  SG_ CoolingMotor_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
 
-BO_ 1347 CoolingMotor_Serwo: 8 CoolingMotor
+BO_ 1347 CoolingMotor_Serwo: 2 CoolingMotor
  SG_ CoolingMotor_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingMotor_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
-BO_ 1314 CoolingRight_Fan: 8 CoolingRight
+BO_ 1314 CoolingRight_Fan: 2 CoolingRight
  SG_ CoolingRight_SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingRight_SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
@@ -489,11 +489,11 @@ BO_ 1312 CoolingRight_NODE: 8 CoolingRight
  SG_ CoolingRight_Node_Execution_0003 : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ CoolingRight_Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
-BO_ 1313 CoolingRight_Sensor: 8 CoolingRight
+BO_ 1313 CoolingRight_Sensor: 4 CoolingRight
  SG_ CoolingRight_Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
  SG_ CoolingRight_Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
 
-BO_ 1315 CoolingRight_Serwo: 8 CoolingRight
+BO_ 1315 CoolingRight_Serwo: 2 CoolingRight
  SG_ CoolingRight_PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ CoolingRight_PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
@@ -588,13 +588,12 @@ BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589428 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589684 1000;
-BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0000 "CoolingBack_Node_Execution_Halted";
 BA_ "GenMsgCycleTime" BO_ 993 100;
 BA_ "GenMsgCycleTime" BO_ 995 0;
 BA_ "GenMsgCycleTime" BO_ 992 1000;
-BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
-BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0002 "CoolingMotor_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0000 "CoolingBack_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0002 "CoolingLeft_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0001 "CoolingMotor_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0003 "CoolingRight_Node_Execution_Halted";
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
