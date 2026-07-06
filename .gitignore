@@ -14,5 +14,6 @@
 .log
 .tmp
 .bak
-.c
 .h
+.c
+.bat
