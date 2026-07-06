@@ -246,9 +246,9 @@ BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
  SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
- SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0059,12) [63|87] "V"  RCD
- SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.1465,300) [-300|300] "A"  RCD
- SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.024,50) [0|100] "C"  RCD
+ SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0013,0) [63|87] "V"  RCD
+ SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.00916,-300) [-300|300] "A"  RCD
+ SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.001526,0) [0|100] "C"  RCD
 
 BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
  SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,0) [0|100] "C" CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
