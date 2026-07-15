@@ -235,9 +235,9 @@ BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
  SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
- SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.0013,0) [63|87] "V"  RCD
- SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.00916,-300) [-300|300] "A"  RCD
- SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.001526,0) [0|100] "C"  RCD
+ SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.1,0) [63|87] "V"  RCD
+ SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.1,-300) [-300|300] "A"  RCD
+ SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.01,0) [0|100] "C"  RCD
 
 BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
  SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,49.8039) [0|100] "C" Vector__XXX
@@ -573,9 +573,21 @@ BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
+BA_ "GenMsgCycleTime" BO_ 128 5000;
+BA_ "GenMsgCycleTime" BO_ 159 1000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589428 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589684 1000;
+BA_ "GenMsgCycleTime" BO_ 130 500;
+BA_ "GenMsgCycleTime" BO_ 131 1000;
+BA_ "GenMsgCycleTime" BO_ 132 1000;
+BA_ "GenMsgCycleTime" BO_ 133 1000;
+BA_ "GenMsgCycleTime" BO_ 134 1000;
+BA_ "GenMsgCycleTime" BO_ 135 1000;
+BA_ "GenMsgCycleTime" BO_ 136 1000;
+BA_ "GenMsgCycleTime" BO_ 137 1000;
+BA_ "GenMsgCycleTime" BO_ 138 1000;
+BA_ "GenMsgCycleTime" BO_ 139 1000;
 BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0002 "CoolingBack_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingLeft_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
