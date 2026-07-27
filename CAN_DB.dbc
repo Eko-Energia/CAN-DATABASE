@@ -57,12 +57,32 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1920 LightsRR_NODE: 8 LightsRR
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1888 LightsFL_NODE: 8 LightsFL
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1856 LightsFR_NODE: 8 LightsFR
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1696 SensorRL_NODE: 8 SensorRL
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -348,40 +368,40 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
 BO_ 1023 Dashboard_END: 0 Dashboard
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1889 LightsFL_Status: 1 LightsFL
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1921 LightsRR_Status: 1 LightsRR
- SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ middleStop : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ middleStop : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1953 LightsRL_Status: 1 LightsRL
- SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionWhole : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionWhole : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
 
 BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
  SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
@@ -584,6 +604,9 @@ BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "SystemSignalLongSymbol" SG_ 3221225472 BMSMaster_MasterBatteryTemp_0000 "BMSMaster_MasterBatteryTemperatur";
+BA_ "SystemSignalLongSymbol" SG_ 1248 CoolingBack_Node_Execution__0001 "CoolingBack_Node_Execution_Halted";
+BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0002 "CoolingLeft_Node_Execution_Halted";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 128 5000;
 BA_ "GenMsgCycleTime" BO_ 159 1000;
