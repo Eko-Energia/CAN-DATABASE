@@ -35,6 +35,7 @@ BS_:
 
 BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
+
 BO_ 1952 LightsRL_NODE: 8 LightsRL
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -512,26 +513,15 @@ BO_ 193 RCD_Status: 8 RCD
  SG_ ChargingPortStatus : 0|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 994 Dashboard_Lights: 1 Dashboard
- SG_ Headlights : 0|3@1+ (1,0) [0|7] "" Vector__XXX
- SG_ TurnSignal_Left : 3|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ TurnSignal_Right : 5|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Headlights : 0|3@1+ (1,0) [0|7] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ TurnSignal_Left : 3|2@1+ (1,0) [0|3] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ TurnSignal_Right : 5|2@1+ (1,0) [0|3] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] ""  LightsFR,LightsFL,LightsRL,LightsRR
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
 
 
-CM_ SG_ 3221225472 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
-CM_ SG_ 3221225472 Turn_Signal_Left "Turn indicator status showing left.
-";
-CM_ SG_ 3221225472 Turn_Signal_Right "Turn indicator status showing right.
-";
-CM_ SG_ 3221225472 Emergency "Hazard warning lights activation status.";
-CM_ SG_ 3221225472 Wiper_Slow "Indicates activation of low-speed windshield wiper mode.";
-CM_ SG_ 3221225472 Wiper_Fast "Indicates activation of high-speed windshield wiper mode.";
-CM_ SG_ 3221225472 Wiper_Rain "Indicates automatic wiper mode activation based on rain sensor input.";
-CM_ SG_ 3221225472 Fluid "Windshield washer fluid level status indication.";
-CM_ SG_ 3221225472 Mode "Operating mode selection for car permormance.";
 CM_ SG_ 1696 Error_Code "Error code from csv error file
 ";
 CM_ SG_ 1696 Reserved "Reserved for future use
