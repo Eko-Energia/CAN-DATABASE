@@ -342,7 +342,7 @@ BO_ 2 SafeState_AccVal: 8 SafeState
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
  SG_ PRND : 14|2@1+ (1,0) [0|3] ""  RCD
- SG_ Mode : 16|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Mode : 16|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 995 Dashboard_Wipers: 1 Dashboard
  SG_ Status : 0|3@1+ (1,0) [0|7] "" Vector__XXX
