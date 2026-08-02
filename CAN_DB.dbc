@@ -357,13 +357,13 @@ BO_ 1857 LightsFR_Status: 1 LightsFR
  SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1889 LightsFL_Status: 1 LightsFL
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  CoolingBack
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  CoolingBack
 
 BO_ 1921 LightsRR_Status: 1 LightsRR
  SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -508,15 +508,15 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
-BO_ 998 Dashboard_SerwoBatteryCabin: 8 Vector__XXX
- SG_ PosSerwoLeftCabin : 0|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ PosSerwoRightCabin : 8|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ PosSerwoLeftBattery : 16|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ PosSerwoRightBattery : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+BO_ 998 Dashboard_SerwoBatteryCabin: 8 Dashboard
+ SG_ PosSerwoLeftCabin : 0|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingMotor,CoolingRight
+ SG_ PosSerwoRightCabin : 8|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingMotor,CoolingRight
+ SG_ PosSerwoLeftBattery : 16|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingMotor,CoolingRight
+ SG_ PosSerwoRightBattery : 24|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingMotor,CoolingRight
 
-BO_ 997 Dashboard_SerwoEngines: 8 Vector__XXX
- SG_ PosSerwoLeft : 0|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ PosSerwoRight : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+BO_ 997 Dashboard_SerwoEngines: 8 Dashboard
+ SG_ PosSerwoLeft : 0|8@1+ (1,0) [0|100] ""  CoolingBack
+ SG_ PosSerwoRight : 8|8@1+ (1,0) [0|100] ""  CoolingBack
 
 
 
