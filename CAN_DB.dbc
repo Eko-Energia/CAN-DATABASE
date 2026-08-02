@@ -508,6 +508,16 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
+BO_ 998 Dashboard_SerwoBatteryCabin: 8 Vector__XXX
+ SG_ PosSerwoLeftCabin : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ PosSerwoRightCabin : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ PosSerwoLeftBattery : 16|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ PosSerwoRightBattery : 24|8@1+ (1,0) [0|100] "" Vector__XXX
+
+BO_ 997 Dashboard_SerwoEngines: 8 Vector__XXX
+ SG_ PosSerwoLeft : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ PosSerwoRight : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+
 
 
 CM_ SG_ 3221225472 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
