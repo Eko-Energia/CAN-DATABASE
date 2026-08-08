@@ -36,6 +36,27 @@ BS_:
 BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
 
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
+ SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
+ SG_ BMSMaster_MasterBatteryTemp_0000 : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
+ SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
+ SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0002 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ NewSignal_0001 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Rain_Level : 8|8@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ TurnSignal_Left : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Turn_Signal_Left : 5|1@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ Turn_Signal_Right : 6|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Slow : 0|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Fast : 1|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ NewSignal_0004 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 BO_ 1952 LightsRL_NODE: 8 LightsRL
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -121,7 +142,7 @@ BO_ 64 Pedals_NODE: 8 Pedals
 
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
 
-BO_ 1 SafeState_NODE: 8 SafeState
+BO_ 3 SafeState_NODE: 8 SafeState
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Severity : 20|3@1+ (1,0) [0|0] "" Vector__XXX
@@ -520,6 +541,8 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
+BO_ 1 SafeState_Activ: 8 Vector__XXX
+
 
 
 CM_ SG_ 1696 Error_Code "Error code from csv error file
@@ -544,9 +567,9 @@ CM_ SG_ 128 Error_Code "Error code from csv errors file
 ";
 CM_ SG_ 128 Reserved "Reserved for future use";
 CM_ SG_ 128 Error_Specific_Data "Blob for error specific data (sensor reading, variable dump, etc. - depeneds of error)";
-CM_ BO_ 1 "
+CM_ BO_ 3 "
 ";
-CM_ SG_ 1 ErrorCode "Error Code";
+CM_ SG_ 3 ErrorCode "Error Code";
 CM_ SG_ 166 LeftMotorErrorMsg "manual p.214
 ";
 CM_ SG_ 167 RightMotorErrorMsg "manual p.214";
@@ -578,6 +601,7 @@ CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
 CM_ BO_ 30 "Master FRAME used by other ECUs to calculate synced ticks";
 CM_ BO_ 994 "Sent on event (change)";
 CM_ BO_ 996 "Sent on event (change)";
+CM_ BO_ 1 "Frame from all PCBs.";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
@@ -585,6 +609,7 @@ BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 128 5000;
 BA_ "GenMsgCycleTime" BO_ 1 5000;
+BA_ "GenMsgCycleTime" BO_ 3 5000;
 BA_ "GenMsgCycleTime" BO_ 159 1000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
 BA_ "GenMsgCycleTime" BO_ 2550589428 1000;
@@ -607,6 +632,7 @@ BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
 BA_ "GenMsgCycleTime" BO_ 996 0;
+BA_ "GenMsgCycleTime" BO_ 1 0;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
