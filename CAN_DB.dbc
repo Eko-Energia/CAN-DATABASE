@@ -641,6 +641,7 @@ BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
 BA_ "GenMsgCycleTime" BO_ 996 0;
+BA_ "GenMsgCycleTime" BO_ 1 0;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
