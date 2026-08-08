@@ -363,6 +363,7 @@ BO_ 2 SafeState_AccVal: 8 SafeState
 BO_ 993 Dashboard_Control: 8 Dashboard
  SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
  SG_ PRND : 14|2@1+ (1,0) [0|3] ""  RCD
+ SG_ Mode : 16|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 995 Dashboard_Wipers: 1 Dashboard
  SG_ Status : 0|3@1+ (1,0) [0|7] "" Vector__XXX
@@ -533,10 +534,10 @@ BO_ 193 RCD_Status: 8 RCD
  SG_ ChargingPortStatus : 0|2@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 994 Dashboard_Lights: 1 Dashboard
- SG_ Headlights : 0|3@1+ (1,0) [0|7] "" Vector__XXX
- SG_ TurnSignal_Left : 3|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ TurnSignal_Right : 5|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Headlights : 0|3@1+ (1,0) [0|7] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ TurnSignal_Left : 3|2@1+ (1,0) [0|3] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ TurnSignal_Right : 5|2@1+ (1,0) [0|3] ""  LightsFR,LightsFL,LightsRL,LightsRR
+ SG_ Emergency : 7|1@1+ (1,0) [0|1] ""  LightsFR,LightsFL,LightsRL,LightsRR
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
@@ -544,17 +545,6 @@ BO_ 1 SafeState_Activ: 8 Vector__XXX
 
 
 
-CM_ SG_ 3221225472 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
-CM_ SG_ 3221225472 Turn_Signal_Left "Turn indicator status showing left.
-";
-CM_ SG_ 3221225472 Turn_Signal_Right "Turn indicator status showing right.
-";
-CM_ SG_ 3221225472 Emergency "Hazard warning lights activation status.";
-CM_ SG_ 3221225472 Wiper_Slow "Indicates activation of low-speed windshield wiper mode.";
-CM_ SG_ 3221225472 Wiper_Fast "Indicates activation of high-speed windshield wiper mode.";
-CM_ SG_ 3221225472 Wiper_Rain "Indicates automatic wiper mode activation based on rain sensor input.";
-CM_ SG_ 3221225472 Fluid "Windshield washer fluid level status indication.";
-CM_ SG_ 3221225472 Mode "Operating mode selection for car permormance.";
 CM_ SG_ 1696 Error_Code "Error code from csv error file
 ";
 CM_ SG_ 1696 Reserved "Reserved for future use
@@ -618,6 +608,7 @@ BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 128 5000;
+BA_ "GenMsgCycleTime" BO_ 1 5000;
 BA_ "GenMsgCycleTime" BO_ 3 5000;
 BA_ "GenMsgCycleTime" BO_ 159 1000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
@@ -663,6 +654,7 @@ VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 993 PRND 0 "P" 1 "R" 2 "N" 3 "D" ;
+VAL_ 993 Mode 0 "Normal" 1 "Special" ;
 VAL_ 995 Status 0 "OFF" 1 "ONCE" 2 "INTERVAL" 3 "LOW" 4 "HIGH" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
