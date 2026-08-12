@@ -543,6 +543,9 @@ BO_ 996 Dashboard_CC: 0 Dashboard
 
 BO_ 1 SafeState_Activ: 8 Vector__XXX
 
+BO_ 514 JETSON_STATIC_PedalSensitivity: 2 JETSON
+ SG_ Function_Z : 0|16@1+ (0.1,0) [20|300] "" Vector__XXX
+
 
 
 CM_ SG_ 1696 Error_Code "Error code from csv error file
@@ -608,7 +611,6 @@ BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 128 5000;
-BA_ "GenMsgCycleTime" BO_ 1 5000;
 BA_ "GenMsgCycleTime" BO_ 3 5000;
 BA_ "GenMsgCycleTime" BO_ 159 1000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
@@ -632,7 +634,9 @@ BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
 BA_ "GenMsgCycleTime" BO_ 996 0;
+BA_ "GenMsgCycleTime" BO_ 1 5000;
 BA_ "GenMsgCycleTime" BO_ 1 0;
+BA_ "GenMsgCycleTime" BO_ 514 0;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
