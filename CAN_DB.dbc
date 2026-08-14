@@ -541,6 +541,9 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
+BO_ 513 JETSON_STATIC_ChildMode: 1 JETSON
+ SG_ ThrottleLimiter : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+
 BO_ 1 SafeState_Activ: 8 Vector__XXX
 
 
@@ -632,8 +635,8 @@ BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
 BA_ "GenMsgCycleTime" BO_ 996 0;
-BA_ "GenMsgCycleTime" BO_ 1 0;
-VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
+BA_ "GenMsgCycleTime" BO_ 513 0;
+BA_ "GenMsgCycleTime" BO_ 1 5000;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
 VAL_ 2566869221 Charger1StaringState 0 "Charging" 1 "Turn off" ;
