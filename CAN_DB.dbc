@@ -55,6 +55,12 @@ BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
  SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PosSerwoLeftCabin : 0|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
+ SG_ PosSerwoRightCabin : 8|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
+ SG_ PosSerwoLeftBattery : 16|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
+ SG_ PosSerwoRightBattery : 24|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
+ SG_ PosSerwoLeft : 0|8@1+ (1,0) [0|100] ""  CoolingMotor
+ SG_ PosSerwoRight : 8|8@1+ (1,0) [0|100] ""  CoolingMotor
 
 BO_ 1952 LightsRL_NODE: 8 LightsRL
 
@@ -508,16 +514,6 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
-BO_ 998 Dashboard_SerwoBatteryCabin: 8 Dashboard
- SG_ PosSerwoLeftCabin : 0|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
- SG_ PosSerwoRightCabin : 8|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
- SG_ PosSerwoLeftBattery : 16|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
- SG_ PosSerwoRightBattery : 24|8@1+ (1,0) [0|100] ""  CoolingLeft,CoolingRight
-
-BO_ 997 Dashboard_SerwoEngines: 8 Dashboard
- SG_ PosSerwoLeft : 0|8@1+ (1,0) [0|100] ""  CoolingMotor
- SG_ PosSerwoRight : 8|8@1+ (1,0) [0|100] ""  CoolingMotor
-
 
 
 CM_ SG_ 3221225472 Rain_Level "Rain intensity level derived from rain sensor measurement, used for automatic wiper control.";
@@ -625,7 +621,7 @@ VAL_ 2550588916 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 993 PRND 0 "P" 1 "R" 2 "N" 3 "D" ;
-VAL_ 995 Status 0 "OFF" 1 "ONCE" 2 "INTERVAL" 3 "LOW" 4 "HIGH" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
+VAL_ 995 Status 0 "OFF/ Open serwo motor" 1 "ONCE" 2 "INTERVAL/Open serwo left" 3 "LOW/Open serwo right" 4 "HIGH/Close all serwo" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
 VAL_ 1857 direction 1 "On" 0 "Off" ;
