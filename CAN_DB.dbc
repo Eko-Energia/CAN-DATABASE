@@ -636,7 +636,7 @@ VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 993 PRND 0 "P" 1 "R" 2 "N" 3 "D" ;
 VAL_ 993 Mode 0 "Normal" 1 "Special" ;
-VAL_ 995 Status 0 "OFF/Serwo open motor" 1 "ONCE" 2 "INTERVAL/Serwo open left" 3 "LOW/Serwo open right" 4 "HIGH/Serwo close" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
+VAL_ 995 Status 0 "OFF/Serwo open all" 1 "ONCE" 2 "INTERVAL/Serwo open mot/bat" 3 "LOW/Serwo open mot/cab" 4 "HIGH/Serwo close all" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
 VAL_ 1857 direction 1 "On" 0 "Off" ;
