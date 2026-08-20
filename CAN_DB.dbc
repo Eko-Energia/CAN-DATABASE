@@ -35,6 +35,7 @@ BS_:
 
 BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
+
 BO_ 1952 LightsRL_NODE: 8 LightsRL
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -119,6 +120,11 @@ BO_ 64 Pedals_NODE: 8 Pedals
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 512 JETSON_STATIC_NODE: 8 JETSON
+ SG_ Error_Code : 0|16@1+ (1,0) [0|0] ""  Pedals
+ SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] ""  Pedals
+ SG_ Severity : 20|3@1+ (1,0) [0|0] ""  Pedals
+ SG_ Reserved : 16|4@1+ (1,0) [0|0] ""  Pedals
+ SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] ""  Pedals
 
 BO_ 3 SafeState_NODE: 8 SafeState
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -135,7 +141,7 @@ BO_ 1951 LightsRR_END: 8 LightsRR
 
 BO_ 31 SafeState_END: 8 SafeState
 
-BO_ 95 Pedals_END: 8 Pedals
+BO_ 95 Pedals_END: 0 Pedals
 
 BO_ 159 BMSMaster_END: 8 BMSMaster
 
@@ -235,9 +241,9 @@ BO_ 2566869224 Charger3_STATIC_OUT: 8 Charger3
  SG_ Charger3CommunicationState : 36|1@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 2550588916 RCD_STATIC_Charger1Comms: 8 RCD
- SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
- SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A" Vector__XXX
- SG_ Control : 39|8@0+ (0.1,0) [0|0] "" Vector__XXX
+ SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V"  Pedals
+ SG_ MaxChargCurr : 23|16@0+ (0.1,0) [0|0] "A"  Pedals
+ SG_ Control : 39|8@0+ (0.1,0) [0|0] ""  Pedals
 
 BO_ 2550589428 RCD_STATIC_Charger2Comms: 8 RCD
  SG_ MaxChargVolt : 7|16@0+ (0.1,0) [0|0] "V" Vector__XXX
@@ -339,9 +345,9 @@ BO_ 2 SafeState_AccVal: 8 SafeState
  SG_ AccVal_TrueVal : 0|8@1+ (0.05,0) [0|12] "g" Vector__XXX
 
 BO_ 993 Dashboard_Control: 8 Dashboard
- SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD
- SG_ PRND : 14|2@1+ (1,0) [0|3] ""  RCD
- SG_ Mode : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Absolute_Encoder : 0|14@1+ (0.06591796875,540) [-540|540] "deg"  RCD,Pedals
+ SG_ PRND : 14|2@1+ (1,0) [0|3] ""  RCD,Pedals
+ SG_ Mode : 16|1@1+ (1,0) [0|1] ""  Pedals
 
 BO_ 995 Dashboard_Wipers: 1 Dashboard
  SG_ Status : 0|3@1+ (1,0) [0|7] "" Vector__XXX
@@ -356,43 +362,43 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
 BO_ 1023 Dashboard_END: 0 Dashboard
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard
 
 BO_ 1889 LightsFL_Status: 1 LightsFL
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard
 
 BO_ 1921 LightsRR_Status: 1 LightsRR
- SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ middleStop : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ middleStop : 5|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard
 
 BO_ 1953 LightsRL_Status: 1 LightsRL
- SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ positionWhole : 5|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
- SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard,Pedals
+ SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ positionWhole : 5|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard
 
 BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
- SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+ SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1602 SensorFR_Suspension: 2 SensorFR
  SG_ SensorFR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
@@ -401,7 +407,7 @@ BO_ 1603 SensorFR_Door_Sensor: 1 SensorFR
  SG_ SensorFR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1633 SensorFL_Wheel_Speed: 2 SensorFL
- SG_ SensorFL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+ SG_ SensorFL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1634 SensorFL_Suspension: 2 SensorFL
  SG_ SensorFL_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
@@ -410,7 +416,7 @@ BO_ 1635 SensorFL_Door_Sensor: 1 SensorFL
  SG_ SensorFL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1665 SensorRR_Wheel_Speed: 2 SensorRR
- SG_ SensorRR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+ SG_ SensorRR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1666 SensorRR_Suspension: 2 SensorRR
  SG_ SensorRR_Suspension : 0|16@1+ (0.02,0) [0|75] "mm" Vector__XXX
@@ -419,7 +425,7 @@ BO_ 1667 SensorRR_Door_Sensor: 1 SensorRR
  SG_ SensorRR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
 
 BO_ 1697 SensorRL_Wheel_Speed: 2 SensorRL
- SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s" Vector__XXX
+ SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1698 SensorRL_Suspension: 2 SensorRL
  SG_ SensorRL_Suspension : 0|16@1+ (0.02,0) [0|55] "m/s" Vector__XXX
