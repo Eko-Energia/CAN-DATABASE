@@ -36,27 +36,6 @@ BS_:
 BU_: BMSMaster Converter CoolingBack CoolingLeft CoolingMotor CoolingRight Dashboard EngineLeft JETSON LightsFR LightsFL LightsRR LightsRL MPPT Pedals RCD SafeState SensorFR SensorFL SensorRR SensorRL SmallBMS Charger1 Charger2 Charger3 EngineRight CoolingLeft CoolingRight CoolingBack CoolingMotor
 
 
-BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
- SG_ BMSMaster_MasterBatteryCurrent : 23|8@0+ (0.1465,300) [-300|300] "A" Vector__XXX
- SG_ BMSMaster_MasterBatteryVoltage : 15|8@0+ (0.0059,12) [63|87] "V" Vector__XXX
- SG_ BMSMaster_MasterBatteryTemp_0000 : 47|8@0+ (0.024,50) [0|100] "C" Vector__XXX
- SG_ BMSMaster_ErrorCodeBL : 23|8@0+ (1,0) [256|65535] "" Vector__XXX
- SG_ NewSignal_0003 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0002 : 8|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ NewSignal_0001 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Light_Switch : 0|8@1+ (1,0) [0|3] "" Vector__XXX
- SG_ Rain_Level : 8|8@1+ (1,0) [0|4] "" Vector__XXX
- SG_ TurnSignal_Left : 0|8@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Turn_Signal_Left : 5|1@1+ (1,0) [0|3] "" Vector__XXX
- SG_ Turn_Signal_Right : 6|1@1+ (1,0) [0|0] "" Vector__XXX
- SG_ Emergency : 7|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Wiper_Slow : 0|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Wiper_Fast : 1|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Wiper_Rain : 2|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Fluid : 3|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ Mode : 4|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ NewSignal_0004 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
-
 BO_ 1952 LightsRL_NODE: 8 LightsRL
  SG_ Error_Code : 0|16@1+ (1,0) [0|0] "" Vector__XXX
  SG_ Node_Execution_Halted : 23|1@1+ (1,0) [0|0] "" Vector__XXX
@@ -273,7 +252,7 @@ BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
 
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.1,0) [63|87] "V"  RCD
- SG_ BMSMaster_MasterBatteryCurrent : 16|16@1+ (0.1,-300) [-300|300] "A"  RCD
+ SG_ BMSMaster_MasterBatteryCurrent : 16|16@1- (0.1,0) [-300|300] "A"  RCD
  SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.01,0) [0|100] "C"  RCD
 
 BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
@@ -541,6 +520,9 @@ BO_ 994 Dashboard_Lights: 1 Dashboard
 
 BO_ 996 Dashboard_CC: 0 Dashboard
 
+BO_ 513 JETSON_STATIC_ChildMode: 1 JETSON
+ SG_ ThrottleLimiter : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+
 BO_ 1 SafeState_Activ: 8 Vector__XXX
 
 BO_ 514 JETSON_STATIC_PedalSensitivity: 2 JETSON
@@ -629,7 +611,7 @@ BA_ "GenMsgCycleTime" BO_ 139 1000;
 BA_ "GenMsgCycleTime" BO_ 2 10000;
 BA_ "GenMsgCycleTime" BO_ 993 100;
 BA_ "GenMsgCycleTime" BO_ 995 0;
-BA_ "GenMsgCycleTime" BO_ 992 1000;
+BA_ "GenMsgCycleTime" BO_ 992 5000;
 BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
@@ -637,6 +619,7 @@ BA_ "GenMsgCycleTime" BO_ 996 0;
 BA_ "GenMsgCycleTime" BO_ 1 5000;
 BA_ "GenMsgCycleTime" BO_ 1 0;
 BA_ "GenMsgCycleTime" BO_ 514 0;
+BA_ "GenMsgCycleTime" BO_ 513 0;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
@@ -659,7 +642,7 @@ VAL_ 2550589428 Control 0 "Start charging" 1 "Stop charging" ;
 VAL_ 2550589684 Control 1 "Stop charging" 0 "Start charging" ;
 VAL_ 993 PRND 0 "P" 1 "R" 2 "N" 3 "D" ;
 VAL_ 993 Mode 0 "Normal" 1 "Special" ;
-VAL_ 995 Status 0 "OFF" 1 "ONCE" 2 "INTERVAL" 3 "LOW" 4 "HIGH" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
+VAL_ 995 Status 0 "OFF/Serwo open all" 1 "ONCE" 2 "INTERVAL/Serwo open mot/bat" 3 "LOW/Serwo open mot/cab" 4 "HIGH/Serwo close all" 5 "BACK" 6 "BACK_FLUID" 7 "FLUID" ;
 VAL_ 1857 smallLens1 1 "On" 0 "Off" ;
 VAL_ 1857 smallLens2 1 "On" 0 "Off" ;
 VAL_ 1857 direction 1 "On" 0 "Off" ;
