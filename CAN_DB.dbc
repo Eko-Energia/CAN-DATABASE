@@ -183,10 +183,10 @@ BO_ 2566869221 Charger1_STATIC_OUT: 8 Charger1
  SG_ Charger1CommunicationState : 36|1@0+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 422 EngineLeft_STATIC_TPDO1: 8 EngineLeft
- SG_ LeftMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
- SG_ LeftMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
- SG_ LeftMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
- SG_ LeftMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+ SG_ LeftMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm"  Dashboard
+ SG_ LeftMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A"  Dashboard
+ SG_ LeftMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V"  Dashboard
+ SG_ LeftMotorTorque : 48|16@1- (1,0) [-500|500] "Nm"  Dashboard
 
 BO_ 678 EngineLeft_STATIC_TPDO2: 8 EngineLeft
  SG_ LeftMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C"  CoolingMotor
@@ -209,10 +209,10 @@ BO_ 1831 EngineRight_STATIC_NMT: 1 EngineRight
  SG_ RightMotorNMTState : 0|8@1+ (1,0) [0|255] "" Vector__XXX
 
 BO_ 423 EngineRight_STATIC_TPDO1: 8 EngineRight
- SG_ RightMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm" Vector__XXX
- SG_ RightMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A" Vector__XXX
- SG_ RightMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V" Vector__XXX
- SG_ RightMotorTorque : 48|16@1- (1,0) [-500|500] "Nm" Vector__XXX
+ SG_ RightMotorRPM : 0|16@1- (1,0) [-30000|30000] "rpm"  Dashboard
+ SG_ RightMotorCurrent : 16|16@1- (0.1,0) [-32768|32767] "A"  Dashboard
+ SG_ RightMotorVoltage : 32|16@1+ (0.01,0) [0|10500] "V"  Dashboard
+ SG_ RightMotorTorque : 48|16@1- (1,0) [-500|500] "Nm"  Dashboard
 
 BO_ 679 EngineRight_STATIC_TPDO2: 8 EngineRight
  SG_ RightMotorControllerTemp : 0|16@1- (0.1,0) [-1000|3000] "C"  CoolingMotor
@@ -362,40 +362,40 @@ BO_ 992 Dashboard_NODE: 8 Dashboard
 BO_ 1023 Dashboard_END: 0 Dashboard
 
 BO_ 1857 LightsFR_Status: 1 LightsFR
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1889 LightsFL_Status: 1 LightsFL
- SG_ smallLens1 : 0|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ smallLens2 : 1|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ day : 3|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ sideDirection : 4|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ headlights : 5|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ highBeams : 6|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ smallLens1 : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ smallLens2 : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ day : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideDirection : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ headlights : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ highBeams : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1921 LightsRR_Status: 1 LightsRR
- SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ middleStop : 5|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ middleStop : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1953 LightsRL_Status: 1 LightsRL
- SG_ reverse : 0|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ sideStop : 1|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ direction : 2|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ positionCircles : 3|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ safeState : 4|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ positionWhole : 5|1@1+ (1,0) [0|0] ""  Dashboard
- SG_ positionSide : 6|1@1+ (1,0) [0|0] ""  Dashboard
+ SG_ reverse : 0|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ sideStop : 1|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ direction : 2|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionCircles : 3|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ safeState : 4|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionWhole : 5|1@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ positionSide : 6|1@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
  SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
