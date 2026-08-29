@@ -500,6 +500,62 @@ BO_ 1315 CoolingRight_Serwo: 8 CoolingRight
 BO_ 193 RCD_Status: 8 RCD
  SG_ ChargingPortStatus : 0|2@1+ (1,0) [0|0] "" Vector__XXX
 
+BO_ 140 BMSMaster_JK_Cells_Volt_1_7: 7 BMSMaster
+ SG_ Voltage_Cell1 : 0|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell2 : 8|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell3 : 16|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell4 : 24|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell5 : 32|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell6 : 40|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell7 : 48|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+
+BO_ 141 BMSMaster_JK_Cells_Volt_8_14: 7 BMSMaster
+ SG_ Voltage_Cell8 : 0|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell9 : 8|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell10 : 16|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell11 : 24|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell12 : 32|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell13 : 40|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell14 : 48|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+
+BO_ 142 BMSMaster_JK_Cells_Volt_15_21: 7 BMSMaster
+ SG_ Voltage_Cell15 : 0|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell16 : 8|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell17 : 16|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell18 : 24|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell19 : 32|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell20 : 40|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+ SG_ Voltage_Cell21 : 48|8@1+ (0.01,0) [0|425] "V" Vector__XXX
+
+BO_ 143 BMSMaster_JK_Cells_Temp_1_7: 8 BMSMaster
+ SG_ Temperature_Cell1 : 0|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell2 : 8|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell3 : 16|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell4 : 24|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell5 : 32|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell6 : 40|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell7 : 48|8@1+ (1,0) [0|100] "C" Vector__XXX
+
+BO_ 144 BMSMaster_JK_Cells_Temp_8_14: 8 BMSMaster
+ SG_ Temperature_Cell8 : 0|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell9 : 8|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell10 : 16|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell11 : 24|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell12 : 32|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell13 : 40|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell14 : 48|8@1+ (1,0) [0|100] "C" Vector__XXX
+
+BO_ 145 BMSMaster_JK_Cells_Temp_15_21: 8 BMSMaster
+ SG_ Temperature_Cell15 : 0|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell16 : 8|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell17 : 16|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell18 : 24|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell19 : 32|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell20 : 40|8@1+ (1,0) [0|100] "C" Vector__XXX
+ SG_ Temperature_Cell21 : 48|8@1+ (1,0) [0|100] "C" Vector__XXX
+
+BO_ 146 Unnamed: 8 BMSMaster
+
 
 
 CM_ SG_ 1696 Error_Code "Error code from csv error file
@@ -568,6 +624,28 @@ CM_ SG_ 0 NMT_Command "0x01 - Go To Operational
 0x80 - Go To Pre-Operational
 0x81 - Reset Node";
 CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
+CM_ SG_ 140 Voltage_Cell1 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell2 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell3 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell4 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell5 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell6 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 140 Voltage_Cell7 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell8 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell9 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell10 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell11 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell12 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell13 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 141 Voltage_Cell14 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell15 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell16 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell17 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell18 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell19 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell20 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 142 Voltage_Cell21 "Precision up to 0.01V, data is stored from 0 to 4.25V. So if on CAN data is 300, then it's equal to 300 * 0.01 = 3V";
+CM_ SG_ 143 Temperature_Cell1 "`";
 BA_DEF_ BO_  "GenMsgCycleTime" INT 1 50000;
 BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
 BA_DEF_DEF_  "GenMsgCycleTime" 100;
@@ -593,6 +671,13 @@ BA_ "SystemSignalLongSymbol" SG_ 1280 CoolingLeft_Node_Execution__0001 "CoolingL
 BA_ "SystemSignalLongSymbol" SG_ 1344 CoolingMotor_Node_Execution_0003 "CoolingMotor_Node_Execution_Halted";
 BA_ "SystemSignalLongSymbol" SG_ 1312 CoolingRight_Node_Execution_0004 "CoolingRight_Node_Execution_Halted";
 BA_ "GenMsgCycleTime" BO_ 193 1000;
+BA_ "GenMsgCycleTime" BO_ 140 1000;
+BA_ "GenMsgCycleTime" BO_ 141 1000;
+BA_ "GenMsgCycleTime" BO_ 142 1000;
+BA_ "GenMsgCycleTime" BO_ 143 1000;
+BA_ "GenMsgCycleTime" BO_ 144 1000;
+BA_ "GenMsgCycleTime" BO_ 145 1000;
+BA_ "GenMsgCycleTime" BO_ 146 1000;
 VAL_ 2566869221 Charger1HardwareFailure 0 "Normal" 1 "Hardware failure" ;
 VAL_ 2566869221 Charger1Temperature 0 "Normal" 1 "Over temp protection" ;
 VAL_ 2566869221 Charger1InputVoltage 0 "Normal" 1 "Wrong" ;
