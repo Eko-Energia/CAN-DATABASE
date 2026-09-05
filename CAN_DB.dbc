@@ -591,7 +591,7 @@ CM_ SG_ 0 NMT_Command "0x01 - Go To Operational
 0x80 - Go To Pre-Operational
 0x81 - Reset Node";
 CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
-CM_ SG_ 515 TorqueVectoringGain "Share of the calculated torque vectoring split applied to the rear wheels. 0 keeps both wheels on the same command, like an open differential, 100 applies the whole calculated split. Pedals uses 50 until this frame arrives.";
+CM_ SG_ 515 TorqueVectoringGain "Share of the calculated torque vectoring split applied to the rear wheels (0 - open differential, 100 - full split).";
 CM_ BO_ 30 "Master FRAME used by other ECUs to calculate synced ticks";
 CM_ BO_ 994 "Sent on event (change)";
 CM_ BO_ 996 "Sent on event (change)";
