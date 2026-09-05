@@ -534,6 +534,8 @@ BO_ 145 BMSMaster_JK_CycleStats: 8 BMSMaster
  SG_ BMSMaster_JK_Cycles : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ BMSMaster_JK_CellCount : 16|8@1+ (1,0) [0|32] "" Vector__XXX
 
+
+
 CM_ SG_ 1696 Error_Code "Error code from csv error file
 ";
 CM_ SG_ 1696 Reserved "Reserved for future use
