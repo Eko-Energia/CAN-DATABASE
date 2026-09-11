@@ -586,8 +586,6 @@ BO_ 515 JETSON_STATIC_TorqueVectoring: 1 JETSON
 
 
 
-CM_ SG_ 3221225472 SteeringWheel "Steering wheel linear potentiometer (LPF 175mm) readout
-";
 CM_ SG_ 1696 Error_Code "Error code from csv error file
 ";
 CM_ SG_ 1696 Reserved "Reserved for future use
