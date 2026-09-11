@@ -441,7 +441,7 @@ BO_ 65 Pedals_JTSN_WORKS: 5 Pedals
  SG_ BrakesLinear : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ BrakesHall : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ AccelPedal : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
- SG_ Steering : 24|16@1+ (0.1,0) [-100|100] "mm" Vector__XXX
+ SG_ Steering : 24|16@1- (0.1,0) [-100|100] "mm" Vector__XXX
 
 BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
  SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
@@ -643,6 +643,7 @@ BA_DEF_DEF_  "GenMsgCycleTime" 100;
 BA_DEF_DEF_  "SystemSignalLongSymbol" "";
 BA_ "GenMsgCycleTime" BO_ 192 2000;
 BA_ "GenMsgCycleTime" BO_ 128 5000;
+BA_ "GenMsgCycleTime" BO_ 64 5000;
 BA_ "GenMsgCycleTime" BO_ 3 5000;
 BA_ "GenMsgCycleTime" BO_ 159 1000;
 BA_ "GenMsgCycleTime" BO_ 2550588916 1000;
@@ -662,6 +663,7 @@ BA_ "GenMsgCycleTime" BO_ 2 10000;
 BA_ "GenMsgCycleTime" BO_ 993 100;
 BA_ "GenMsgCycleTime" BO_ 995 0;
 BA_ "GenMsgCycleTime" BO_ 992 5000;
+BA_ "GenMsgCycleTime" BO_ 65 100;
 BA_ "GenMsgCycleTime" BO_ 30 10000;
 BA_ "GenMsgCycleTime" BO_ 193 1000;
 BA_ "GenMsgCycleTime" BO_ 140 1000;
