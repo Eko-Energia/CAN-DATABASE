@@ -547,11 +547,26 @@ BO_ 143 BMSMaster_JK_Cells_9_12: 8 BMSMaster
  SG_ BMSMaster_JK_Cell11_mV : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
  SG_ BMSMaster_JK_Cell12_mV : 48|16@1+ (1,0) [0|5000] "mV" Vector__XXX
 
-BO_ 144 BMSMaster_JK_Temp: 8 BMSMaster
+BO_ 144 BMSMaster_JK_Cells_13_16: 8 BMSMaster
+ SG_ BMSMaster_JK_Cell13_mV : 0|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell14_mV : 16|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell15_mV : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell16_mV : 48|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 145 BMSMaster_JK_Cells_17_20: 8 BMSMaster
+ SG_ BMSMaster_JK_Cell17_mV : 0|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell18_mV : 16|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell19_mV : 32|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+ SG_ BMSMaster_JK_Cell20_mV : 48|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 146 BMSMaster_JK_Cells_21: 2 BMSMaster
+ SG_ BMSMaster_JK_Cell21_mV : 0|16@1+ (1,0) [0|5000] "mV" Vector__XXX
+
+BO_ 147 BMSMaster_JK_Temp: 8 BMSMaster
  SG_ BMSMaster_JK_MosTemp : 0|8@1- (1,0) [-40|125] "C" Vector__XXX
  SG_ BMSMaster_JK_BalTemp : 8|8@1- (1,0) [-40|125] "C" Vector__XXX
 
-BO_ 145 BMSMaster_JK_CycleStats: 8 BMSMaster
+BO_ 148 BMSMaster_JK_CycleStats: 8 BMSMaster
  SG_ BMSMaster_JK_Cycles : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
  SG_ BMSMaster_JK_CellCount : 16|8@1+ (1,0) [0|32] "" Vector__XXX
 
@@ -570,6 +585,9 @@ BO_ 1 SafeState_Activ: 8 Vector__XXX
 
 BO_ 514 JETSON_STATIC_PedalSensitivity: 2 JETSON
  SG_ Function_Z : 0|16@1+ (0.1,0) [20|300] "" Vector__XXX
+
+BO_ 515 JETSON_STATIC_TorqueVectoring: 1 JETSON
+ SG_ TorqueVectoringGain : 0|8@1+ (1,0) [0|100] "%"  Pedals
 
 
 
@@ -610,7 +628,8 @@ CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its correspond
 CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
 CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
 CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board. SIGN CONVENTION: positive = discharging, negative = charging.";
+CM_ SG_ 140 BMSMaster_JK_PackCurrent "Pack current as reported by the JK BMS internal shunt. SIGN CONVENTION: positive = discharging, negative = charging - same as BMSMaster_MasterBatteryCurrent, so the two can be compared directly. Note the JK protocol itself uses the opposite sign; BMS Master negates it before transmitting.";
 CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
 CM_ SG_ 2 AccVal_TrueVal ".05g/byte offset:0 e.g. 200, its corresponding 10g";
 CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
@@ -628,12 +647,17 @@ CM_ SG_ 0 NMT_Command "0x01 - Go To Operational
 0x81 - Reset Node";
 CM_ SG_ 0 NodeID "Targed NodeID (if send zero, all CANOpen devices will react)";
 CM_ BO_ 30 "Master FRAME used by other ECUs to calculate synced ticks";
+CM_ SG_ 515 TorqueVectoringGain "Share of the calculated torque vectoring split applied to the rear wheels (0 - open differential, 100 - full split).";
 CM_ BO_ 140 "JK pack V/I/SOC/SOH/status from BMS_CAN_Get_JK_PackInfo. Voltage/Current factor 0.01 (raw=mV/10, mA/10). StatusFlags bit6 = JK comm error.";
 CM_ BO_ 141 "JK cells 1..4 voltages [mV] LE u16 from BMS_CAN_Get_JK_CellVolt_1_4.";
 CM_ BO_ 142 "JK cells 5..8 voltages [mV] LE u16 from BMS_CAN_Get_JK_CellVolt_5_8.";
 CM_ BO_ 143 "JK cells 9..12 voltages [mV] LE u16 from BMS_CAN_Get_JK_CellVolt_9_12.";
-CM_ BO_ 144 "JK MOS/balancer temperatures [degC] int8 from BMS_CAN_Get_JK_Temp.";
-CM_ BO_ 145 "JK cycle count + cellCount from BMS_CAN_Get_JK_CycleStats.";
+CM_ BO_ 144 "JK cells 13..16 voltages [mV] LE u16.";
+CM_ BO_ 145 "JK cells 17..20 voltages [mV] LE u16.";
+CM_ BO_ 146 "JK cell 21 voltage [mV] LE u16. Pack is 21S; DLC 2.";
+CM_ BO_ 147 "JK MOS/balancer temperatures [degC] int8 from BMS_CAN_Get_JK_Temp.";
+CM_ BO_ 148 "JK cycle count + cellCount from BMS_CAN_Get_JK_CycleStats.";
+CM_ BO_ 30 "Master FRAME used by other ECUs to calculate synced ticks";
 CM_ BO_ 994 "Sent on event (change)";
 CM_ BO_ 996 "Sent on event (change)";
 CM_ BO_ 1 "Frame from all PCBs.";
@@ -670,6 +694,9 @@ BA_ "GenMsgCycleTime" BO_ 142 1000;
 BA_ "GenMsgCycleTime" BO_ 143 1000;
 BA_ "GenMsgCycleTime" BO_ 144 1000;
 BA_ "GenMsgCycleTime" BO_ 145 1000;
+BA_ "GenMsgCycleTime" BO_ 146 1000;
+BA_ "GenMsgCycleTime" BO_ 147 1000;
+BA_ "GenMsgCycleTime" BO_ 148 1000;
 BA_ "GenMsgCycleTime" BO_ 994 0;
 BA_ "GenMsgCycleTime" BO_ 996 0;
 BA_ "GenMsgCycleTime" BO_ 513 0;
