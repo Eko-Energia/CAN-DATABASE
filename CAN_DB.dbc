@@ -257,7 +257,7 @@ BO_ 2550589684 RCD_STATIC_Charger3Comms: 8 RCD
 BO_ 130 BMSMaster_MasterVoltCurrTemp: 6 BMSMaster
  SG_ BMSMaster_MasterBatteryVoltage : 0|16@1+ (0.1,0) [63|87] "V"  RCD
  SG_ BMSMaster_MasterBatteryCurrent : 16|16@1- (0.1,0) [-300|300] "A"  RCD
- SG_ BMSMaste_MasterBatteryTemperatur : 32|16@1+ (0.01,0) [0|100] "C"  RCD
+ SG_ BMSMaster_MasterBatteryTemperature : 32|16@1+ (0.01,0) [0|100] "C"  RCD
 
 BO_ 131 BMSMaster_PCBsTherm1Temp: 7 BMSMaster
  SG_ BMSMaster_PCB1Therm1Temp : 0|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
@@ -334,7 +334,7 @@ BO_ 138 BMSMaster_PCBsTherm8Temp: 7 BMSMaster
 BO_ 139 BMSMaster_PCBsTherm9Temp: 7 BMSMaster
  SG_ BMSMaster_PCB1Therm9Temp : 0|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
  SG_ BMSMaster_PCB2Therm9Temp : 8|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
- SG_ BMSMaster_PCB13herm9Temp : 16|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
+ SG_ BMSMaster_PCB3Therm9Temp : 16|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
  SG_ BMSMaster_PCB4Therm9Temp : 24|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
  SG_ BMSMaster_PCB5Therm9Temp : 32|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
  SG_ BMSMaster_PCB6Therm9Temp : 40|8@1+ (0.39216,0) [0|100] "C"  CoolingBack,CoolingLeft,CoolingMotor,CoolingRight
@@ -621,9 +621,9 @@ CM_ SG_ 2550589428 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its correspon
 CM_ SG_ 2550589428 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
 CM_ SG_ 2550589684 MaxChargVolt ".1V/byte offset:0 e.g. Vset=3201, its corresponding 320.1V";
 CM_ SG_ 2550589684 MaxChargCurr ".1A/byte offset:0 e.g. Iset=582, its corresponding 58.2A";
-CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
-CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Masster board. SIGN CONVENTION: positive = discharging, negative = charging.";
-CM_ SG_ 130 BMSMaste_MasterBatteryTemperatur "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Masster board";
+CM_ SG_ 130 BMSMaster_MasterBatteryVoltage "Master battery Voltage MSB value which is read by ADC embedded in stm32 core on BMS Master board";
+CM_ SG_ 130 BMSMaster_MasterBatteryCurrent "Master battery Current LSB value which is read by ADC embedded in stm32 core on BMS Master board. SIGN CONVENTION: positive = discharging, negative = charging.";
+CM_ SG_ 130 BMSMaster_MasterBatteryTemperature "Master battery Temperature MSB value which is read by ADC embedded in stm32 core on BMS Master board";
 CM_ SG_ 2 AccVal_TrueVal ".05g/byte offset:0 e.g. 200, its corresponding 10g";
 CM_ SG_ 993 Absolute_Encoder "Validity flag for absolute encoder signal indicating whether the steering position data is correct and usable.";
 CM_ SG_ 993 PRND "Gear selector position derived from ADC reading of PRND switch (4 discrete positions).";
