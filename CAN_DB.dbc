@@ -558,8 +558,9 @@ BO_ 146 BMSMaster_JK_Cells_21: 2 BMSMaster
  SG_ BMSMaster_JK_Cell21_mV : 0|16@1+ (1,0) [0|5000] "mV" Vector__XXX
 
 BO_ 147 BMSMaster_JK_Temp: 8 BMSMaster
- SG_ BMSMaster_JK_MosTemp : 0|8@1- (1,0) [-40|125] "C" Vector__XXX
- SG_ BMSMaster_JK_BalTemp : 8|8@1- (1,0) [-40|125] "C" Vector__XXX
+ SG_ BMSMaster_JK_InternalTemp : 0|8@1- (1,0) [-40|100] "C" Vector__XXX
+ SG_ BMSMaster_JK_ContactorTemp : 8|8@1- (1,0) [-40|100] "C" Vector__XXX
+ SG_ BMSMaster_JK_ControlBowlTemp : 16|8@1- (1,0) [-40|100] "C" Vector__XXX
 
 BO_ 148 BMSMaster_JK_CycleStats: 8 BMSMaster
  SG_ BMSMaster_JK_Cycles : 0|16@1+ (1,0) [0|65535] "" Vector__XXX
