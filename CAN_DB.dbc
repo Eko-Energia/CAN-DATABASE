@@ -436,7 +436,7 @@ BO_ 65 Pedals_JTSN_WORKS: 5 Pedals
  SG_ BrakesLinear : 0|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ BrakesHall : 8|8@1+ (1,0) [0|100] "%" Vector__XXX
  SG_ AccelPedal : 16|8@1+ (1,0) [0|100] "%" Vector__XXX
- SG_ Steering : 24|16@1- (0.1,0) [-100|100] "mm" Vector__XXX
+ SG_ Steering : 24|16@1- (1,0) [-100|100] "mm" Vector__XXX
 
 BO_ 0 Pedals_STATIC_EnginesNMT: 2 Pedals
  SG_ NMT_Command : 0|8@1+ (1,0) [0|255] "-" Vector__XXX
