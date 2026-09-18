@@ -484,8 +484,8 @@ BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1345 CoolingMotor_Sensor: 4 CoolingMotor
- SG_ Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
- SG_ Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+ SG_ Sensor_Temp : 7|16@0- (0.1,0) [-40|80] "C" Vector__XXX
+ SG_ Sensor_RH : 23|16@0+ (0.1,0) [0|99.9] "" Vector__XXX
 
 BO_ 1347 CoolingMotor_Serwo: 2 CoolingMotor
  SG_ PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
@@ -584,6 +584,9 @@ BO_ 514 JETSON_STATIC_PedalSensitivity: 2 JETSON
 
 BO_ 515 JETSON_STATIC_TorqueVectoring: 1 JETSON
  SG_ TorqueVectoringGain : 0|8@1+ (1,0) [0|100] "%"  Pedals
+
+BO_ 13 CoolingCabinManual: 8 Vector__XXX
+ SG_ FanManual : 0|8@1+ (1,0) [0|100] "" Vector__XXX
 
 
 
@@ -756,4 +759,5 @@ VAL_ 994 Headlights 0 "OFF" 1 "AUTO" 2 "DAY" 3 "NIGHT" 4 "HIGHBEAMS" ;
 VAL_ 994 TurnSignal_Left 0 "OFF" 1 "ONCE" 2 "ON" ;
 VAL_ 994 TurnSignal_Right 0 "OFF" 1 "ONCE" 2 "ON" ;
 VAL_ 994 Emergency 0 "OFF" 1 "ON" ;
+VAL_ 13 FanManual 100 "FULL" 0 "OFF" 30 "HALF" 70 "MORE_HALF" ;
 
