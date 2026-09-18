@@ -485,8 +485,8 @@ BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1345 CoolingMotor_Sensor: 4 CoolingMotor
- SG_ Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
- SG_ Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+ SG_ Sensor_Temp : -1|16@0- (0.1,0) [-40|80] "C" Vector__XXX
+ SG_ Sensor_RH : 15|16@0+ (0.1,0) [0|99.9] "" Vector__XXX
 
 BO_ 1347 CoolingMotor_Serwo: 2 CoolingMotor
  SG_ PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
