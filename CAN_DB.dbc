@@ -465,16 +465,16 @@ BO_ 1280 CoolingLeft_NODE: 8 CoolingLeft
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1281 CoolingLeft_Sensor: 4 CoolingLeft
- SG_ Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
- SG_ Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+ SG_ Sensor_Temp : 7|16@0- (0.1,0) [-40|80] "C" Vector__XXX
+ SG_ Sensor_RH : 23|16@0+ (0.1,0) [0|99.9] "" Vector__XXX
 
 BO_ 1283 CoolingLeft_Serwo: 2 CoolingLeft
  SG_ PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
  SG_ PosSerwo2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
 BO_ 1346 CoolingMotor_Fan: 2 CoolingMotor
- SG_ SpeedF1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
- SG_ SpeedF2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ Fan_F1F2 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
+ SG_ Pomp_P1P2 : 8|8@1+ (1,0) [0|100] "" Vector__XXX
 
 BO_ 1344 CoolingMotor_NODE: 8 CoolingMotor
  SG_ ErrorCode : 0|16@1+ (1,0) [0|0] "" Vector__XXX
@@ -503,8 +503,8 @@ BO_ 1312 CoolingRight_NODE: 8 CoolingRight
  SG_ Error_Specific_Data : 24|40@1+ (1,0) [0|0] "" Vector__XXX
 
 BO_ 1313 CoolingRight_Sensor: 4 CoolingRight
- SG_ Sensor_Temp : 0|16@1- (1,0) [-40|80] "C" Vector__XXX
- SG_ Sensor_RH : 16|16@1+ (1,0) [0|99.9] "" Vector__XXX
+ SG_ Sensor_Temp : 7|16@0- (0.1,0) [-40|80] "C" Vector__XXX
+ SG_ Sensor_RH : 23|16@0+ (0.1,0) [0|99.9] "" Vector__XXX
 
 BO_ 1315 CoolingRight_Serwo: 2 CoolingRight
  SG_ PosSerwo1 : 0|8@1+ (1,0) [0|100] "" Vector__XXX
