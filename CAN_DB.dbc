@@ -401,7 +401,7 @@ BO_ 1601 SensorFR_Wheel_Speed: 2 SensorFR
  SG_ SensorFR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1602 SensorFR_Suspension: 2 SensorFR
- SG_ SensorFR_Suspension : 0|16@1- (0.02,0) [-75|75] "mm" Vector__XXX
+ SG_ SensorFR_Suspension : 0|16@1- (0.01,0) [-75|75] "mm" Vector__XXX
 
 BO_ 1603 SensorFR_Door_Sensor: 1 SensorFR
  SG_ SensorFR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
@@ -410,7 +410,7 @@ BO_ 1633 SensorFL_Wheel_Speed: 2 SensorFL
  SG_ SensorFL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1634 SensorFL_Suspension: 2 SensorFL
- SG_ SensorFL_Suspension : 0|16@1- (0.02,0) [-75|75] "mm" Vector__XXX
+ SG_ SensorFL_Suspension : 0|16@1- (0.01,0) [-75|75] "mm" Vector__XXX
 
 BO_ 1635 SensorFL_Door_Sensor: 1 SensorFL
  SG_ SensorFL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
@@ -419,7 +419,7 @@ BO_ 1665 SensorRR_Wheel_Speed: 2 SensorRR
  SG_ SensorRR_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1666 SensorRR_Suspension: 2 SensorRR
- SG_ SensorRR_Suspension : 0|16@1- (0.02,0) [-75|75] "mm" Vector__XXX
+ SG_ SensorRR_Suspension : 0|16@1- (0.01,0) [-75|75] "mm" Vector__XXX
 
 BO_ 1667 SensorRR_Door_Sensor: 1 SensorRR
  SG_ SensorRR_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
@@ -428,7 +428,7 @@ BO_ 1697 SensorRL_Wheel_Speed: 2 SensorRL
  SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1698 SensorRL_Suspension: 2 SensorRL
- SG_ SensorRL_Suspension : 0|16@1- (0.02,0) [-75|75] "mm" Vector__XXX
+ SG_ SensorRL_Suspension : 0|16@1- (0.01,0) [-75|75] "mm" Vector__XXX
 
 BO_ 1699 SensorRL_Door_Sensor: 1 SensorRL
  SG_ SensorRL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
