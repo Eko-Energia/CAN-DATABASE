@@ -428,7 +428,7 @@ BO_ 1697 SensorRL_Wheel_Speed: 2 SensorRL
  SG_ SensorRL_Wheel_Speed : 0|16@1+ (0.000839,0) [0|55] "m/s"  Pedals
 
 BO_ 1698 SensorRL_Suspension: 2 SensorRL
- SG_ SensorRL_Suspension : 0|16@1- (0.02,0) [-75|55] "m/s" Vector__XXX
+ SG_ SensorRL_Suspension : 0|16@1- (0.02,0) [-75|75] "mm" Vector__XXX
 
 BO_ 1699 SensorRL_Door_Sensor: 1 SensorRL
  SG_ SensorRL_Door_Sensor : 0|1@1+ (1,0) [0|1] "" Vector__XXX
