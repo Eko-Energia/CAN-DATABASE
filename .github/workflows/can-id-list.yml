@@ -1,0 +1,106 @@
+# Regenerates CAN frame ID headers from the DBC files and opens a PR
+# in Eko-Energia/stm_drivers with the result.
+#
+# - pull_request to master: only validates (DBC parses, headers compile).
+# - push to master (merged PR) / manual run: validates and opens or updates
+#   the PR in stm_drivers (branch auto/can-id-list).
+#
+# Requires the secret STM_DRIVERS_TOKEN: a fine-grained PAT (or GitHub App
+# token) with "Contents: read and write" and "Pull requests: read and write"
+# on Eko-Energia/stm_drivers.
+
+name: CAN ID list
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'CAN_DB.dbc'
+      - 'CAN2_DB.dbc'
+      - 'scripts/gen_can_id_list.py'
+      - '.github/workflows/can-id-list.yml'
+  pull_request:
+    branches: [master]
+    paths:
+      - 'CAN_DB.dbc'
+      - 'CAN2_DB.dbc'
+      - 'scripts/gen_can_id_list.py'
+      - '.github/workflows/can-id-list.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: can-id-list-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  # Pinned commit of Eko-Energia/cantools (master has failing c_source tests).
+  CANTOOLS_REF: f3bce39bbb43a69ebc84600fbe7cd4cba9fd6973
+  OUT_DIR: stm_drivers/CAN/Inc
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout CAN-DATABASE
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install cantools (Eko-Energia fork)
+        run: pip install "cantools @ git+https://github.com/Eko-Energia/cantools.git@${CANTOOLS_REF}"
+
+      - name: Checkout stm_drivers
+        if: github.event_name != 'pull_request'
+        uses: actions/checkout@v4
+        with:
+          repository: Eko-Energia/stm_drivers
+          ref: main
+          path: stm_drivers
+          token: ${{ secrets.STM_DRIVERS_TOKEN }}
+
+      - name: Generate headers
+        run: |
+          python scripts/gen_can_id_list.py CAN_DB.dbc  "$OUT_DIR/can_id_list.h"
+          python scripts/gen_can_id_list.py CAN2_DB.dbc "$OUT_DIR/can2_id_list.h"
+
+      - name: Check headers compile as C
+        run: |
+          for h in "$OUT_DIR"/can_id_list.h "$OUT_DIR"/can2_id_list.h; do
+            printf '#include "%s"\n' "$PWD/$h" | gcc -std=c99 -Wall -Werror -fsyntax-only -x c -
+          done
+
+      - name: Show diff
+        if: github.event_name != 'pull_request'
+        run: git -C stm_drivers diff --stat
+
+      - name: Open or update PR in stm_drivers
+        if: github.event_name != 'pull_request'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          path: stm_drivers
+          token: ${{ secrets.STM_DRIVERS_TOKEN }}
+          add-paths: |
+            CAN/Inc/can_id_list.h
+            CAN/Inc/can2_id_list.h
+          branch: auto/can-id-list
+          base: main
+          delete-branch: true
+          commit-message: |
+            chore(can): regenerate CAN ID lists from CAN-DATABASE
+
+            Source: ${{ github.repository }}@${{ github.sha }}
+          title: 'chore(can): regenerate CAN ID lists from CAN-DATABASE'
+          body: |
+            Automatically generated from [`${{ github.repository }}@${{ github.sha }}`](${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}).
+
+            - `CAN/Inc/can_id_list.h` <- `CAN_DB.dbc` (CAN1)
+            - `CAN/Inc/can2_id_list.h` <- `CAN2_DB.dbc` (CAN2)
+
+            Do not edit these files by hand; change the DBC in CAN-DATABASE instead.
+            Workflow run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
