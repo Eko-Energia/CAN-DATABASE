@@ -13,7 +13,7 @@ name: CAN ID list
 
 on:
   push:
-    branches: [master, feat/can-id-list-pipeline] # TEMP: test branch, remove before merge
+    branches: [master]
     paths:
       - 'CAN_DB.dbc'
       - 'CAN2_DB.dbc'
